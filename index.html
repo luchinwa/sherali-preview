@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Шерали — ресторан-караоке в Хабаровске</title>
+<meta name="description" content="Ресторан-караоке «Шерали» в центре Хабаровска: восточная и европейская кухня, караоке со звукорежиссёром и вокалистом, детская комната с аниматором, банкеты и праздники.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#130d17; --bg2:#1c1322; --card:#231829; --line:#3a2a44;
+  --text:#f3ece6; --muted:#b8a9bf; --violet:#8a4fd6; --violet-2:#6c35b3;
+  --gold:#e3b04b; --gold-2:#f2c96d; --rose:#d6336c; --ok:#4cc38a;
+  --r:18px; --wrap:1200px;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
+@media(min-width:768px){.wrap{padding:0 32px}}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:.2px}
+h2{font-size:clamp(34px,5vw,54px);margin-bottom:14px}
+h3{font-size:26px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.lead{color:var(--muted);font-size:17px;max-width:640px}
+section{padding:88px 0}
+@media(max-width:767px){section{padding:64px 0}}
+
+/* placeholders the client must fill */
+.ph{outline:1.5px dashed var(--gold);outline-offset:3px;border-radius:4px;cursor:help}
+.ph-note{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1a1208;background:var(--gold);border-radius:4px;padding:2px 6px;vertical-align:middle}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:15px;border:0;cursor:pointer;transition:transform .15s,background .2s,box-shadow .2s;white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.btn-gold{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#22160a;box-shadow:0 8px 28px -8px rgba(227,176,75,.6)}
+.btn-gold:hover{box-shadow:0 10px 34px -6px rgba(227,176,75,.85)}
+.btn-ghost{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.22);color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .25s,border-color .25s;border-bottom:1px solid transparent}
+.hdr.solid{background:rgba(19,13,23,.92);backdrop-filter:blur(12px);border-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.logo img{height:46px;width:auto}
+.logo small{display:block;font-size:10px;letter-spacing:.24em;color:var(--muted);margin-top:2px;text-transform:uppercase}
+.nav{display:flex;gap:24px;font-size:14px;font-weight:600;margin-right:auto}
+.nav a{opacity:.85}.nav a:hover{opacity:1;color:var(--gold-2)}
+.hdr-phone{font-weight:700;font-size:15px;white-space:nowrap;text-align:right;line-height:1.2}
+.hdr-phone small{display:block;font-weight:500;font-size:12px;color:var(--muted)}
+.hdr .btn{min-height:44px;padding:0 20px}
+@media(max-width:1023px){.nav{display:none}.hdr-phone{margin-left:auto}}
+@media(max-width:600px){.hdr-phone,.hdr .btn{display:none}.logo img{height:38px}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:120px 0 56px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url(img/hero.jpg) center/cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,13,23,.55) 0%,rgba(19,13,23,.35) 35%,rgba(19,13,23,.92) 78%,var(--bg) 100%)}
+.hero .wrap{position:relative;width:100%}
+.status{display:inline-flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:rgba(19,13,23,.7);border:1px solid rgba(255,255,255,.16);font-size:13px;font-weight:600;backdrop-filter:blur(6px)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px rgba(76,195,138,.2)}
+.dot.off{background:#8a7d90;box-shadow:none}
+.hero h1{font-size:clamp(44px,7.4vw,92px);max-width:900px;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--gold-2)}
+.hero p.sub{font-size:clamp(16px,1.7vw,19px);color:#e1d6e6;max-width:620px;margin-bottom:30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+.proof{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;padding-top:26px;border-top:1px solid rgba(255,255,255,.14)}
+.proof-item{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--muted);line-height:1.35}
+.proof-item b{display:block;color:var(--text);font-size:15px}
+.proof-item img{width:44px;height:44px;border-radius:10px;object-fit:cover;background:#fff}
+@media(max-width:600px){.hero-cta .btn{flex:1 1 100%}}
+
+/* USP */
+.usp{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-8px}
+.usp-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.usp-ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:rgba(138,79,214,.16);color:#c7a2ff;margin-bottom:16px}
+.usp-ico svg{width:24px;height:24px}
+.usp-card h3{font-family:var(--sans);font-size:17px;font-weight:700;margin-bottom:6px;line-height:1.3}
+.usp-card p{font-size:14px;color:var(--muted)}
+@media(max-width:1023px){.usp{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.usp{grid-template-columns:1fr}}
+
+/* banquets */
+.banq{background:var(--bg2);border-block:1px solid var(--line)}
+.banq-top{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:end;margin-bottom:40px}
+@media(max-width:900px){.banq-top{grid-template-columns:1fr;gap:20px}}
+.occ{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:56px}
+.occ-card{position:relative;border-radius:var(--r);overflow:hidden;min-height:250px;display:flex;align-items:flex-end;padding:20px;border:1px solid var(--line);cursor:pointer;text-align:left;background:#000}
+.occ-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;transition:transform .5s,opacity .3s}
+.occ-card:hover img{transform:scale(1.05);opacity:.7}
+.occ-card div{position:relative}
+.occ-card h3{font-size:28px;margin-bottom:6px}
+.occ-card p{font-size:13px;color:#e4dbe8}
+.occ-card .go{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--gold-2)}
+@media(max-width:1023px){.occ{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.occ{grid-template-columns:1fr}.occ-card{min-height:190px}}
+
+.halls{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:56px}
+.hall{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.hall-photos{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:3px;height:230px}
+.hall-photos img{width:100%;height:100%;object-fit:cover}
+.hall-photos img:first-child{grid-row:1/3}
+.hall-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.hall-body h3{margin-bottom:10px}
+.hall-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.hall-meta span{font-size:13px;font-weight:600;padding:5px 11px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.hall-body p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.hall-body .btn{margin-top:auto;min-height:46px}
+@media(max-width:1023px){.halls{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){.halls{grid-template-columns:1fr}}
+
+.incl{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 32px;margin-bottom:8px}
+.incl li{list-style:none;display:flex;gap:12px;font-size:15px}
+.incl li::before{content:"";flex:none;width:22px;height:22px;margin-top:1px;border-radius:50%;background:rgba(227,176,75,.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e3b04b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/13px no-repeat}
+@media(max-width:900px){.incl{grid-template-columns:1fr}}
+
+/* quiz */
+.quiz{display:grid;grid-template-columns:.85fr 1.15fr;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:var(--card);margin-top:56px}
+.quiz-side{position:relative;padding:36px;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px;background:#000}
+.quiz-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
+.quiz-side>*:not(img){position:relative}
+.quiz-side h2{font-size:clamp(30px,3.6vw,44px)}
+.quiz-side ul{list-style:none;margin-top:14px;font-size:14px;color:#e8dfec}
+.quiz-side li{padding:4px 0}
+.quiz-side li::before{content:"✦ ";color:var(--gold)}
+.quiz-main{padding:36px;display:flex;flex-direction:column}
+.q-progress{display:flex;gap:6px;margin-bottom:10px}
+.q-progress i{flex:1;height:4px;border-radius:4px;background:var(--line);transition:background .3s}
+.q-progress i.on{background:var(--gold)}
+.q-step-n{font-size:13px;color:var(--muted);margin-bottom:22px}
+.q-step{display:none}.q-step.on{display:block;animation:fade .3s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.q-step h3{font-family:var(--sans);font-size:22px;font-weight:700;margin-bottom:18px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0}
+.opt span{display:flex;align-items:center;gap:10px;min-height:56px;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);font-weight:600;font-size:15px;cursor:pointer;transition:border-color .2s,background .2s}
+.opt span:hover{border-color:#5b4766}
+.opt input:checked+span{border-color:var(--gold);background:rgba(227,176,75,.1)}
+.opt input:focus-visible+span{outline:2px solid var(--gold);outline-offset:2px}
+@media(max-width:520px){.opts{grid-template-columns:1fr}.quiz-main,.quiz-side{padding:24px}}
+@media(max-width:900px){.quiz{grid-template-columns:1fr}.quiz-side{min-height:260px}}
+.field{display:block;margin-bottom:14px}
+.field>span{display:block;font-size:13px;font-weight:600;color:var(--muted);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;min-height:52px;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:#1a1220;outline:none;font-size:16px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.grid2{grid-template-columns:1fr}}
+.q-nav{display:flex;gap:10px;margin-top:auto;padding-top:24px}
+.q-nav .btn{flex:1}
+.q-back{flex:0 0 auto!important}
+.consent{font-size:12px;color:var(--muted);margin-top:12px}
+.done{text-align:center;padding:24px 0}
+.done .big{font-size:52px;line-height:1;margin-bottom:12px}
+.done h3{margin-bottom:8px}
+.done p{color:var(--muted)}
+.proto-note{font-size:12px;color:var(--gold);margin-top:16px}
+
+/* split features */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split.rev .split-media{order:2}
+.split-media{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/3}
+.split-media img{width:100%;height:100%;object-fit:cover}
+.split-media .tag{position:absolute;left:16px;bottom:16px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 30px}
+.fact{padding:16px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.fact b{display:block;font-size:17px}
+.fact span{font-size:13px;color:var(--muted)}
+.split-cta{display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:28px}.split.rev .split-media{order:0}}
+
+/* menu */
+.menu-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tab{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;font-weight:600;font-size:14px;cursor:pointer}
+.tab.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+.dishes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.dish img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.dish-b{padding:16px 18px 18px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.dish h4{font-size:16px;font-weight:700;line-height:1.3}
+.dish small{color:var(--muted);font-size:13px}
+.price{font-weight:800;font-size:17px;white-space:nowrap;color:var(--gold-2)}
+.badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:var(--rose);margin-bottom:6px}
+@media(max-width:900px){.dishes{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.dishes{grid-template-columns:1fr}}
+.menu-foot{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;align-items:center}
+.menu-foot p{color:var(--muted);font-size:14px;margin-left:auto}
+
+/* weekday offer */
+.offer{display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;padding:30px 34px;border-radius:24px;background:linear-gradient(120deg,#3b1d63,#5a2a8f 55%,#7a3aa8);border:1px solid #7d55b5}
+.offer .when{font-family:var(--serif);font-size:54px;line-height:.9;font-weight:700;color:var(--gold-2)}
+.offer .when small{display:block;font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#e8dcf5;font-weight:700;margin-top:6px}
+.offer h3{font-family:var(--sans);font-size:21px;font-weight:700;margin-bottom:4px}
+.offer p{color:#e8dcf5;font-size:15px}
+@media(max-width:800px){.offer{grid-template-columns:1fr;gap:14px;padding:26px}}
+
+/* reviews */
+.rev-grid{display:grid;grid-template-columns:320px 1fr;gap:20px}
+.rating{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:18px}
+.rating .num{font-family:var(--serif);font-size:72px;line-height:1;font-weight:700}
+.stars{color:var(--gold);letter-spacing:3px;font-size:20px}
+.awards{display:flex;gap:12px}
+.awards img{width:96px;height:120px;object-fit:contain;background:#fff;border-radius:12px;padding:6px}
+.rev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev{background:var(--card);border:1px dashed #6a5576;border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:12px;color:var(--muted);font-size:14px}
+.rev .who{display:flex;align-items:center;gap:10px}
+.rev .ava{width:38px;height:38px;border-radius:50%;background:#3a2a44}
+.rev .line{height:10px;border-radius:5px;background:#33253b}
+@media(max-width:1023px){.rev-grid{grid-template-columns:1fr}.rev-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.rev-cards{grid-template-columns:1fr}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:10px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:14px;cursor:zoom-in;transition:opacity .2s}
+.gallery img:hover{opacity:.85}
+.gallery .w2{grid-column:span 2}.gallery .h2{grid-row:span 2}
+@media(max-width:800px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}}
+.lb{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{max-height:90vh;border-radius:10px}
+
+/* hotel + delivery */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.duo-card{position:relative;border-radius:24px;overflow:hidden;min-height:380px;display:flex;align-items:flex-end;padding:30px;background:#000;border:1px solid var(--line)}
+.duo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}
+.duo-card>div{position:relative}
+.duo-card h3{font-size:34px;margin-bottom:8px}
+.duo-card p{color:#e4dbe8;margin-bottom:18px;max-width:440px}
+@media(max-width:800px){.duo{grid-template-columns:1fr}.duo-card{min-height:320px;padding:24px}}
+
+/* contacts */
+.contacts{display:grid;grid-template-columns:1fr 1.2fr;gap:20px}
+.c-card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px}
+.c-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.c-row:last-of-type{border:0}
+.c-row svg{width:22px;height:22px;flex:none;color:var(--gold);margin-top:2px}
+.c-row b{display:block}
+.c-row span,.c-row a.sm{color:var(--muted);font-size:14px}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:2px 18px;font-size:14px;color:var(--muted)}
+.hours .today{color:var(--text);font-weight:700}
+.msgs{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.msgs a{flex:1;min-width:120px;display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:12px;font-weight:700;font-size:14px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+.msgs a:hover{border-color:var(--gold)}
+.map{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:420px;background:var(--card)}
+.map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.2)}
+@media(max-width:900px){.contacts{grid-template-columns:1fr}.c-card{padding:24px}}
+
+footer{padding:36px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+@media(min-width:768px){footer{padding-bottom:36px}}
+
+/* mobile action bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;grid-template-columns:1fr 1fr 1.4fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(19,13,23,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line)}
+.mbar a,.mbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:52px;border-radius:12px;font-size:12px;font-weight:700;border:1px solid var(--line);background:rgba(255,255,255,.05);cursor:pointer}
+.mbar svg{width:20px;height:20px}
+.mbar .btn-gold{border:0;flex-direction:row;font-size:15px;background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#22160a}
+@media(max-width:767px){.mbar{display:grid}}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:80;background:rgba(8,5,10,.75);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.on{display:flex}
+.modal-box{width:100%;max-width:520px;max-height:calc(100vh - 32px);overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;position:relative;animation:fade .25s}
+.modal-box h3{font-size:34px;margin-bottom:6px}
+.modal-box>p{color:var(--muted);font-size:14px;margin-bottom:22px}
+.x{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:transparent;cursor:pointer;font-size:20px;line-height:1}
+@media(max-width:520px){.modal-box{padding:24px 18px}}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Шерали — на главную"><img src="img/logo.png" alt="Шерали — ресторан-караоке"></a>
+    <nav class="nav">
+      <a href="#banquets">Банкеты</a>
+      <a href="#karaoke">Караоке</a>
+      <a href="#kids">Детская</a>
+      <a href="#menu">Меню</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="hdr-phone" href="tel:+74212575555">+7 (4212) 57-55-55<small id="hdrStatus">пер. Свободный, 11</small></a>
+    <button class="btn btn-gold" data-book>Забронировать</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" role="img" aria-label="Зал ресторана Шерали"></div>
+  <div class="wrap">
+    <div class="status">
+      <span class="chip"><i class="dot" id="openDot"></i><span id="openText">Открыто</span></span>
+      <span class="chip" id="karaokeChip">🎤 Караоке чт–вс с 19:00</span>
+    </div>
+    <h1>Ресторан-караоке, где <em>поют</em> до двух ночи</h1>
+    <p class="sub">Восточная и европейская кухня в центре Хабаровска. Звукорежиссёр и живой вокалист на сцене, а дети в это время играют с аниматором в своей комнате.</p>
+    <div class="hero-cta">
+      <button class="btn btn-gold" data-book>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+        Забронировать стол
+      </button>
+      <a class="btn btn-ghost" href="#quiz">Рассчитать банкет</a>
+    </div>
+    <div class="proof">
+      <div class="proof-item"><img src="img/award-yandex.jpg" alt=""><div><b>«Хорошее место» 2026</b>Яндекс Карты</div></div>
+      <div class="proof-item"><img src="img/award-guru.jpg" alt=""><div><b>Рекомендуют 2026</b>Restaurant Guru</div></div>
+      <div class="proof-item"><div><b class="ph" title="Подставить актуальный рейтинг с Яндекс Карт">★ 4,_ на Яндексе</b>___ отзывов гостей</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- USP -->
+<section style="padding-top:24px">
+  <div class="wrap">
+    <div class="usp">
+      <div class="usp-card">
+        <div class="usp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v1a7 7 0 0 1-14 0v-1M12 18v4M8 22h8"/></svg></div>
+        <h3>Звукорежиссёр и вокалист</h3>
+        <p>Настроят звук под ваш голос. Вокалист споёт с вами в дуэте или для вас.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="7" r="4"/><path d="M5 21v-1a7 7 0 0 1 14 0v1"/></svg></div>
+        <h3>Детская комната с аниматором</h3>
+        <p>Игрушки, мультики и присмотр, пока взрослые отдыхают. Дети могут оставаться до 00:00.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V9l7-6 7 6v12"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3><span class="ph" title="Уточнить число залов и общую вместимость">3 зала до 50 гостей</span></h3>
+        <p>Банкет, корпоратив или свадьба: подберём зал под ваше число гостей.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21v-4h6v4M8 10h.01M12 10h.01M16 10h.01M8 14h.01M16 14h.01"/></svg></div>
+        <h3>Гостиница в том же здании</h3>
+        <p>Гостиница «Ариранг»: номера для гостей из других городов прямо после праздника.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BANQUETS -->
+<section class="banq" id="banquets">
+  <div class="wrap">
+    <div class="banq-top">
+      <div>
+        <div class="eyebrow">Банкеты и праздники</div>
+        <h2>Праздник под ключ: меню, зал, караоке и детям есть чем заняться</h2>
+      </div>
+      <p class="lead">Выберите повод, и мы пришлём подборку банкетного меню, свободные даты и расчёт на ваше число гостей.</p>
+    </div>
+
+    <div class="occ">
+      <button class="occ-card" data-occ="День рождения"><img src="img/hall-east.jpg" alt=""><div><h3>День рождения</h3><p>Караоке весь вечер, детская комната для гостей с детьми</p><span class="go">Рассчитать →</span></div></button>
+      <button class="occ-card" data-occ="Корпоратив"><img src="img/hall-big.jpg" alt=""><div><h3>Корпоратив</h3><p>Отдельный зал, банкетное меню и караоке для всей команды</p><span class="go">Рассчитать →</span></div></button>
+      <button class="occ-card" data-occ="Свадьба / юбилей"><img src="img/lobby.jpg" alt=""><div><h3>Свадьба и юбилей</h3><p>Залы в восточном стиле и номера для гостей в этом же комплексе</p><span class="go">Рассчитать →</span></div></button>
+      <button class="occ-card" data-occ="Детский праздник"><img src="img/kids.jpg" alt=""><div><h3>Детский праздник</h3><p>Детская комната, аниматор и стол для родителей рядом</p><span class="go">Рассчитать →</span></div></button>
+    </div>
+
+    <div class="halls">
+      <article class="hall">
+        <div class="hall-photos"><img src="img/hall-east.jpg" alt="Восточный зал"><img src="img/hall-east2.jpg" alt=""><img src="img/hall-east3.jpg" alt=""></div>
+        <div class="hall-body">
+          <h3 class="ph" title="Уточнить название зала">Восточный зал</h3>
+          <div class="hall-meta"><span class="ph" title="Уточнить">до __ гостей</span><span>диваны, ТВ, караоке</span></div>
+          <p>Уютный зал с мягкими диванами и восточным декором. Для дня рождения и встречи с друзьями.</p>
+          <button class="btn btn-ghost" data-occ="Восточный зал">Узнать даты</button>
+        </div>
+      </article>
+      <article class="hall">
+        <div class="hall-photos"><img src="img/hall-big.jpg" alt="Большой зал"><img src="img/hall-big2.jpg" alt=""><img src="img/hall-big3.jpg" alt=""></div>
+        <div class="hall-body">
+          <h3 class="ph" title="Уточнить название зала">Большой зал</h3>
+          <div class="hall-meta"><span class="ph" title="Уточнить">до __ гостей</span><span>2 экрана, караоке</span></div>
+          <p>Просторный зал с резным потолком. Подходит для корпоратива, свадьбы и юбилея.</p>
+          <button class="btn btn-ghost" data-occ="Большой зал">Узнать даты</button>
+        </div>
+      </article>
+      <article class="hall">
+        <div class="hall-photos"><img src="img/lobby.jpg" alt="Лаунж"><img src="img/lobby2.jpg" alt=""><img src="img/bar.jpg" alt=""></div>
+        <div class="hall-body">
+          <h3 class="ph" title="Уточнить название зала">Лаунж и бар</h3>
+          <div class="hall-meta"><span class="ph" title="Уточнить">до __ гостей</span><span>барная стойка</span></div>
+          <p>Барная стойка и резные перегородки: для фуршета, девичника и вечеринки.</p>
+          <button class="btn btn-ghost" data-occ="Лаунж и бар">Узнать даты</button>
+        </div>
+      </article>
+    </div>
+
+    <div class="eyebrow">Что входит в банкет</div>
+    <ul class="incl">
+      <li>Банкетное меню от <b class="ph" title="Подставить минимальную цену на гостя">&nbsp;____ ₽&nbsp;</b> на гостя</li>
+      <li>Караоке со звукорежиссёром весь вечер</li>
+      <li>Можно принести свой торт <span class="ph" title="Уточнить условия (пробковый сбор?)">(условия?)</span></li>
+      <li>Детская комната с аниматором</li>
+      <li>Сервировка и обслуживание официантами</li>
+      <li>Номера в гостинице «Ариранг» по спеццене <span class="ph" title="Уточнить, есть ли спеццена">?</span></li>
+    </ul>
+
+    <!-- QUIZ -->
+    <div class="quiz" id="quiz">
+      <div class="quiz-side">
+        <img src="img/hall-big2.jpg" alt="">
+        <div class="eyebrow">4 вопроса · 1 минута</div>
+        <h2>Рассчитаем ваш банкет</h2>
+        <ul>
+          <li>Подборка банкетного меню</li>
+          <li>Свободные даты и залы</li>
+          <li>Ориентировочная стоимость на гостя</li>
+        </ul>
+      </div>
+      <form class="quiz-main" id="quizForm" novalidate>
+        <div class="q-progress"><i class="on"></i><i></i><i></i><i></i></div>
+        <div class="q-step-n">Шаг <b id="qn">1</b> из 4</div>
+
+        <div class="q-step on" data-step="1">
+          <h3>Какой у вас повод?</h3>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="occasion" value="День рождения"><span>🎂 День рождения</span></label>
+            <label class="opt"><input type="radio" name="occasion" value="Корпоратив"><span>💼 Корпоратив</span></label>
+            <label class="opt"><input type="radio" name="occasion" value="Свадьба / юбилей"><span>💍 Свадьба / юбилей</span></label>
+            <label class="opt"><input type="radio" name="occasion" value="Детский праздник"><span>🎈 Детский праздник</span></label>
+            <label class="opt"><input type="radio" name="occasion" value="Встреча с друзьями"><span>🥂 Встреча с друзьями</span></label>
+            <label class="opt"><input type="radio" name="occasion" value="Другое"><span>✨ Другое</span></label>
+          </div>
+        </div>
+
+        <div class="q-step" data-step="2">
+          <h3>Сколько будет гостей?</h3>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="guests" value="до 10"><span>До 10</span></label>
+            <label class="opt"><input type="radio" name="guests" value="10–20"><span>10–20</span></label>
+            <label class="opt"><input type="radio" name="guests" value="20–35"><span>20–35</span></label>
+            <label class="opt"><input type="radio" name="guests" value="35+"><span>Больше 35</span></label>
+          </div>
+        </div>
+
+        <div class="q-step" data-step="3">
+          <h3>Когда планируете?</h3>
+          <label class="field"><span>Дата</span><input type="date" name="date" id="qDate"></label>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="dateUnknown" value="1"><span>Дата пока не определена</span></label>
+            <label class="opt"><input type="checkbox" name="kids" value="1"><span>Будут дети</span></label>
+          </div>
+        </div>
+
+        <div class="q-step" data-step="4">
+          <h3>Куда прислать расчёт?</h3>
+          <div class="grid2">
+            <label class="field"><span>Имя</span><input name="name" autocomplete="given-name" placeholder="Как к вам обращаться"></label>
+            <label class="field"><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required></label>
+          </div>
+          <div class="opts" style="grid-template-columns:repeat(3,1fr)">
+            <label class="opt"><input type="radio" name="via" value="WhatsApp" checked><span>WhatsApp</span></label>
+            <label class="opt"><input type="radio" name="via" value="Telegram"><span>Telegram</span></label>
+            <label class="opt"><input type="radio" name="via" value="Звонок"><span>Звонок</span></label>
+          </div>
+          <p class="consent">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+        </div>
+
+        <div class="q-step" data-step="5">
+          <div class="done">
+            <div class="big">🎉</div>
+            <h3>Заявка принята!</h3>
+            <p>Администратор свяжется с вами в рабочее время.</p>
+            <p class="proto-note">Прототип: в рабочей версии заявка придёт администратору в Telegram/WhatsApp.</p>
+          </div>
+        </div>
+
+        <div class="q-nav">
+          <button type="button" class="btn btn-ghost q-back" id="qBack" hidden>←</button>
+          <button type="button" class="btn btn-gold" id="qNext" disabled>Дальше</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- KARAOKE -->
+<section id="karaoke">
+  <div class="wrap split">
+    <div class="split-media">
+      <img src="img/karaoke.jpg" alt="Караоке в Шерали">
+      <span class="chip tag ph" title="Заменить стоковое фото на снимок с вашего вечера">Фото: заменить на снимок из зала</span>
+    </div>
+    <div>
+      <div class="eyebrow">Караоке</div>
+      <h2>Споёте как на сцене, даже если раньше стеснялись</h2>
+      <p class="lead">Свежие хиты отечественных и зарубежных исполнителей. Звукорежиссёр подстроит звук под ваш голос, а вокалист поддержит в дуэте.</p>
+      <div class="facts">
+        <div class="fact"><b>Чт–Вс</b><span>с 19:00 до закрытия</span></div>
+        <div class="fact"><b>Пт, Сб до 02:00</b><span>самые громкие вечера</span></div>
+        <div class="fact"><b class="ph" title="Уточнить размер каталога">__ 000 песен</b><span>каталог обновляется</span></div>
+        <div class="fact"><b class="ph" title="Уточнить: вход свободный / депозит">Вход свободный?</b><span>условия посещения</span></div>
+      </div>
+      <div class="split-cta">
+        <button class="btn btn-gold" data-book data-preset-time="19:00">Забронировать стол на вечер</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KIDS -->
+<section id="kids" style="padding-top:0">
+  <div class="wrap split rev">
+    <div class="split-media"><img src="img/kids.jpg" alt="Детская комната"></div>
+    <div>
+      <div class="eyebrow">Для родителей</div>
+      <h2>Дети играют, а вы наконец отдыхаете</h2>
+      <p class="lead">Просторная детская комната с игрушками, мультиками и аниматором. Можно спокойно поужинать и спеть, пока за детьми присматривают.</p>
+      <div class="facts">
+        <div class="fact"><b>Аниматор</b><span>присматривает за детьми</span></div>
+        <div class="fact"><b>До 00:00</b><span>дети могут быть в ресторане</span></div>
+        <div class="fact"><b class="ph" title="Есть ли детское меню?">Детское меню</b><span>уточнить</span></div>
+        <div class="fact"><b class="ph" title="Уточнить стоимость">Бесплатно?</b><span>стоимость комнаты</span></div>
+      </div>
+      <div class="split-cta"><button class="btn btn-gold" data-occ="Детский праздник">Детский праздник: рассчитать</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="banq">
+  <div class="wrap">
+    <div class="menu-head">
+      <div>
+        <div class="eyebrow">Меню</div>
+        <h2>Попробуйте наши хиты</h2>
+        <p class="lead">Меню текстом с фото: его удобно листать с телефона, и Яндекс находит блюда по запросу.</p>
+      </div>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab on" data-cat="all">Все</button>
+      <button class="tab" data-cat="cold">Холодные закуски</button>
+      <button class="tab" data-cat="salad">Салаты</button>
+      <button class="tab" data-cat="hot">Горячие закуски</button>
+    </div>
+    <div class="dishes">
+      <article class="dish" data-cat="cold"><img src="img/d-tartar.jpg" alt="Тартар из лосося с авокадо" loading="lazy"><div class="dish-b"><div><span class="badge">Хит</span><h4>Тартар из лосося с авокадо</h4><small>130 г</small></div><div class="price">810 ₽</div></div></article>
+      <article class="dish" data-cat="hot"><img src="img/d-shrimp.jpg" alt="Креветка жареная с чесноком" loading="lazy"><div class="dish-b"><div><h4>Креветка жареная с чесноком</h4><small>160 г</small></div><div class="price">980 ₽</div></div></article>
+      <article class="dish" data-cat="salad"><img src="img/d-bahor.jpg" alt="Салат Бахор" loading="lazy"><div class="dish-b"><div><span class="badge">Восток</span><h4>Салат «Бахор»</h4><small>240 г</small></div><div class="price">510 ₽</div></div></article>
+      <article class="dish" data-cat="hot"><img src="img/d-suluguni.jpg" alt="Жареный сулугуни" loading="lazy"><div class="dish-b"><div><h4>Жареный сулугуни</h4><small>130 г</small></div><div class="price">430 ₽</div></div></article>
+      <article class="dish" data-cat="hot"><img src="img/d-squid.jpg" alt="Кольца кальмара с соусом тартар" loading="lazy"><div class="dish-b"><div><h4>Кольца кальмара с соусом тартар</h4><small>150/30 г</small></div><div class="price">480 ₽</div></div></article>
+      <article class="dish" data-cat="cold"><img src="img/d-herring.jpg" alt="Сельдь с картофелем" loading="lazy"><div class="dish-b"><div><h4>Сельдь с картофелем</h4><small>100/60 г</small></div><div class="price">410 ₽</div></div></article>
+    </div>
+    <div class="menu-foot">
+      <a class="btn btn-gold" href="menu.html">Всё меню и бар</a>
+      <a class="btn btn-ghost" href="menu.html#bar-vino">Барная карта</a>
+      <p>Цены взяты из текущего меню на сайте.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKDAY OFFER -->
+<section style="padding-bottom:0">
+  <div class="wrap">
+    <div class="offer">
+      <div class="when">Пн–Ср<small>будни</small></div>
+      <div>
+        <h3 class="ph" title="Предложение для загрузки будней. Подставить реальную акцию">Скидка __% на кухню в будни / бизнес-ланч с 12:00</h3>
+        <p>Акция на понедельник–среду, чтобы загрузить зал в будни. Условия нужно согласовать.</p>
+      </div>
+      <button class="btn btn-gold" data-book>Забронировать</button>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Отзывы</div>
+    <h2>Нас рекомендуют</h2>
+    <p class="lead" style="margin-bottom:32px">Рейтинг и свежие отзывы с Яндекс Карт будут подтягиваться автоматически через официальный виджет.</p>
+    <div class="rev-grid">
+      <div class="rating">
+        <div><div class="num ph" title="Подставить рейтинг">4,_</div><div class="stars">★★★★★</div><div style="color:var(--muted);font-size:14px">на Яндекс Картах · <span class="ph">___ отзывов</span></div></div>
+        <div class="awards"><img src="img/award-yandex.jpg" alt="Яндекс Карты — Хорошее место 2026"><img src="img/award-guru.jpg" alt="Restaurant Guru — рекомендуют 2026"></div>
+        <a class="btn btn-ghost" href="https://yandex.ru/maps/?text=%D0%A8%D0%B5%D1%80%D0%B0%D0%BB%D0%B8%20%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA" target="_blank" rel="noopener">Читать на Яндекс Картах</a>
+      </div>
+      <div class="rev-cards">
+        <div class="rev"><div class="who"><i class="ava"></i><div style="flex:1"><div class="line" style="width:60%"></div></div></div><div class="line"></div><div class="line" style="width:85%"></div><div class="line" style="width:70%"></div><span class="ph-note">Отзыв с Яндекс Карт</span></div>
+        <div class="rev"><div class="who"><i class="ava"></i><div style="flex:1"><div class="line" style="width:50%"></div></div></div><div class="line"></div><div class="line" style="width:90%"></div><div class="line" style="width:60%"></div><span class="ph-note">Отзыв с Яндекс Карт</span></div>
+        <div class="rev"><div class="who"><i class="ava"></i><div style="flex:1"><div class="line" style="width:65%"></div></div></div><div class="line"></div><div class="line" style="width:80%"></div><div class="line" style="width:75%"></div><span class="ph-note">Отзыв с Яндекс Карт</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow">Интерьер</div>
+    <h2 style="margin-bottom:28px">Загляните к нам</h2>
+    <div class="gallery" id="gallery">
+      <img class="w2 h2" src="img/hero.jpg" alt="" loading="lazy">
+      <img src="img/hall-east3.jpg" alt="" loading="lazy">
+      <img src="img/bar.jpg" alt="" loading="lazy">
+      <img class="w2" src="img/hall-big.jpg" alt="" loading="lazy">
+      <img src="img/lobby2.jpg" alt="" loading="lazy">
+      <img src="img/hall-east2.jpg" alt="" loading="lazy">
+      <img class="w2" src="img/hall-big3.jpg" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL + DELIVERY -->
+<section style="padding-top:0">
+  <div class="wrap duo">
+    <div class="duo-card">
+      <img src="img/hotel.jpg" alt="Гостиничный комплекс Ариранг">
+      <div>
+        <div class="eyebrow">Гостиница «Ариранг»</div>
+        <h3>Праздник и ночлег в одном месте</h3>
+        <p>Гости из других городов останутся в номерах в этом же комплексе. Пакет «банкет + номера» оформим одним звонком.</p>
+        <a class="btn btn-ghost" href="https://www.xn--80aajs0apb.xn--p1ai/" target="_blank" rel="noopener">Номера гостиницы</a>
+      </div>
+    </div>
+    <div class="duo-card">
+      <img src="img/delivery.jpg" alt="Доставка">
+      <div>
+        <div class="eyebrow">Доставка</div>
+        <h3>Ужин из «Шерали» дома</h3>
+        <p>Любимые блюда с доставкой через Яндекс Еду.</p>
+        <a class="btn btn-ghost" href="https://eda.yandex.ru/search?query=%D1%88%D0%B5%D1%80%D0%B0%D0%BB%D0%B8" target="_blank" rel="noopener">Заказать в Яндекс Еде</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts" class="banq">
+  <div class="wrap">
+    <div class="eyebrow">Контакты</div>
+    <h2 style="margin-bottom:28px">Ждём в гости</h2>
+    <div class="contacts">
+      <div class="c-card">
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>г. Хабаровск, пер. Свободный, 11</b><span>гостиничный комплекс «Ариранг»</span></div></div>
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><div><b><a href="tel:+74212575555">+7 (4212) 57-55-55</a></b><a class="sm" href="tel:+79241105577">+7 (924) 110-55-77 · WhatsApp, Telegram</a></div></div>
+        <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div style="flex:1"><b style="margin-bottom:6px">Часы работы</b>
+          <div class="hours" id="hours">
+            <span data-d="1,2,3">Пн–Ср</span><span data-d="1,2,3">12:00 – 22:00</span>
+            <span data-d="4">Чт</span><span data-d="4">12:00 – 00:00</span>
+            <span data-d="5,6">Пт, Сб</span><span data-d="5,6">12:00 – 02:00</span>
+            <span data-d="0">Вс</span><span data-d="0">12:00 – 00:00</span>
+          </div></div></div>
+        <div class="msgs">
+          <a href="https://wa.me/79241105577" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://t.me/sheralirest" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://max.ru/u/f9LHodD0cOKO_DtYiEOkhg3XcTK7HPuqtY9A7qpoSZ8GJi5tptcBkqpGowY" target="_blank" rel="noopener">MAX</a>
+        </div>
+        <button class="btn btn-gold" data-book style="width:100%;margin-top:14px">Забронировать стол</button>
+      </div>
+      <div class="map"><iframe title="Карта: Хабаровск, пер. Свободный, 11" loading="lazy" src="https://yandex.ru/map-widget/v1/?text=%D0%A5%D0%B0%D0%B1%D0%B0%D1%80%D0%BE%D0%B2%D1%81%D0%BA%2C%20%D0%BF%D0%B5%D1%80.%20%D0%A1%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D1%8B%D0%B9%2C%2011&z=16"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© Шерали, ресторан-караоке · sherali.rest@gmail.com</span>
+    <span>Прототип редизайна. Пунктиром выделено то, что нужно уточнить у ресторана.</span>
+  </div>
+</footer>
+
+<!-- MOBILE BAR -->
+<div class="mbar">
+  <a href="tel:+74212575555"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Звонок</a>
+  <a href="https://wa.me/79241105577" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+  <button class="btn-gold" data-book>Бронь стола</button>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal" id="bookModal" role="dialog" aria-modal="true" aria-labelledby="bookTitle">
+  <div class="modal-box">
+    <button class="x" data-close aria-label="Закрыть">×</button>
+    <form id="bookForm" novalidate>
+      <h3 id="bookTitle">Бронь стола</h3>
+      <p>Администратор подтвердит бронь по телефону или в мессенджере.</p>
+      <div class="grid2">
+        <label class="field"><span>Дата</span><input type="date" name="date" id="bDate" required></label>
+        <label class="field"><span>Время</span><select name="time" id="bTime"></select></label>
+      </div>
+      <label class="field"><span>Гостей</span>
+        <select name="guests"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7–10</option><option>Больше 10</option></select>
+      </label>
+      <div class="grid2">
+        <label class="field"><span>Имя</span><input name="name" autocomplete="given-name"></label>
+        <label class="field"><span>Телефон</span><input name="phone" type="tel" autocomplete="tel" placeholder="+7" required></label>
+      </div>
+      <label class="field"><span>Пожелания</span><input name="comment" placeholder="Например: стол ближе к сцене, будут дети"></label>
+      <button class="btn btn-gold" style="width:100%">Забронировать</button>
+      <p class="consent">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+    </form>
+    <div class="done" id="bookDone" hidden>
+      <div class="big">✅</div>
+      <h3>Бронь отправлена</h3>
+      <p>Администратор скоро подтвердит её по телефону.</p>
+      <p class="proto-note">Прототип: заявка никуда не отправляется.</p>
+    </div>
+  </div>
+</div>
+
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+(function(){
+  // header background on scroll
+  var hdr=document.getElementById('hdr');
+  function onScroll(){hdr.classList.toggle('solid',scrollY>40)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Khabarovsk time (UTC+10): open status, karaoke chip, today's hours
+  var now=new Date(Date.now()+(new Date().getTimezoneOffset()+600)*60000);
+  var d=now.getDay(), m=now.getHours()*60+now.getMinutes();
+  var close={0:24*60,1:22*60,2:22*60,3:22*60,4:24*60,5:26*60,6:26*60};
+  var prev=(d+6)%7, open=false, until='';
+  if(m>=720 && m<close[d]){open=true;until=close[d]}
+  else if(m<close[prev]-1440){open=true;until=close[prev]-1440}
+  function hhmm(x){x=x%1440;return String(Math.floor(x/60)).padStart(2,'0')+':'+String(x%60).padStart(2,'0')}
+  document.getElementById('openDot').classList.toggle('off',!open);
+  document.getElementById('openText').textContent=open?'Открыто до '+hhmm(until):'Сейчас закрыто · откроемся в 12:00';
+  document.getElementById('hdrStatus').textContent=open?'Открыто до '+hhmm(until):'Откроемся в 12:00';
+  var kOn=[0,4,5,6].indexOf(d)>-1;
+  document.getElementById('karaokeChip').textContent=kOn?(m>=1140||m<close[d]-1440?'🎤 Караоке идёт прямо сейчас':'🎤 Сегодня караоке с 19:00'):'🎤 Караоке чт–вс с 19:00';
+  document.querySelectorAll('#hours [data-d]').forEach(function(el){if(el.dataset.d.split(',').indexOf(String(d))>-1)el.classList.add('today')});
+
+  // booking modal
+  var modal=document.getElementById('bookModal'),bDate=document.getElementById('bDate'),bTime=document.getElementById('bTime');
+  var iso=function(x){return x.getFullYear()+'-'+String(x.getMonth()+1).padStart(2,'0')+'-'+String(x.getDate()).padStart(2,'0')};
+  bDate.value=bDate.min=iso(now);
+  for(var t=12*60;t<=23*60;t+=30){var o=document.createElement('option');o.textContent=hhmm(t);bTime.appendChild(o)}
+  bTime.value='19:00';
+  document.querySelectorAll('[data-book]').forEach(function(b){b.addEventListener('click',function(){
+    if(b.dataset.presetTime)bTime.value=b.dataset.presetTime;
+    document.getElementById('bookForm').hidden=false;document.getElementById('bookDone').hidden=true;
+    modal.classList.add('on');document.body.style.overflow='hidden';
+  })});
+  function closeModal(){modal.classList.remove('on');document.body.style.overflow=''}
+  modal.addEventListener('click',function(e){if(e.target===modal||e.target.hasAttribute('data-close'))closeModal()});
+  addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();lb.classList.remove('on')}});
+  document.getElementById('bookForm').addEventListener('submit',function(e){
+    e.preventDefault();var ph=this.phone;
+    if(ph.value.replace(/\D/g,'').length<10){ph.focus();ph.style.borderColor='var(--rose)';return}
+    this.hidden=true;document.getElementById('bookDone').hidden=false;
+  });
+
+  // quiz
+  var form=document.getElementById('quizForm'),steps=form.querySelectorAll('.q-step'),bars=form.querySelectorAll('.q-progress i');
+  var next=document.getElementById('qNext'),back=document.getElementById('qBack'),cur=1;
+  document.getElementById('qDate').min=iso(now);
+  function valid(){
+    if(cur===1)return !!form.occasion.value;
+    if(cur===2)return !!form.guests.value;
+    if(cur===3)return !!form.date.value||form.dateUnknown.checked;
+    if(cur===4)return form.phone.value.replace(/\D/g,'').length>=10;
+    return true;
+  }
+  function show(n){
+    cur=n;steps.forEach(function(s){s.classList.toggle('on',+s.dataset.step===n)});
+    bars.forEach(function(b,i){b.classList.toggle('on',i<n)});
+    document.getElementById('qn').textContent=Math.min(n,4);
+    back.hidden=n===1||n===5;next.hidden=n===5;
+    next.textContent=n===4?'Получить расчёт':'Дальше';
+    next.disabled=!valid();
+  }
+  form.addEventListener('input',function(e){
+    next.disabled=!valid();
+    if(cur<3&&valid()&&e.target.type==='radio')setTimeout(function(){show(cur+1)},220);
+  });
+  next.addEventListener('click',function(){if(valid())show(cur+1)});
+  back.addEventListener('click',function(){show(cur-1)});
+  // jump into quiz with a preset occasion
+  document.querySelectorAll('[data-occ]').forEach(function(b){b.addEventListener('click',function(){
+    var v=b.dataset.occ, r=form.querySelector('input[name=occasion][value="'+v+'"]');
+    if(r){r.checked=true;show(2)}else{show(1)}
+    document.getElementById('quiz').scrollIntoView({behavior:'smooth'});
+  })});
+
+  // menu tabs
+  document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x===t)});
+    document.querySelectorAll('.dish').forEach(function(d){d.style.display=(t.dataset.cat==='all'||d.dataset.cat===t.dataset.cat)?'':'none'});
+  })});
+
+  // gallery lightbox
+  var lb=document.getElementById('lb');
+  document.getElementById('gallery').addEventListener('click',function(e){if(e.target.tagName==='IMG'){lb.querySelector('img').src=e.target.src;lb.classList.add('on')}});
+  lb.addEventListener('click',function(){lb.classList.remove('on')});
+})();
+</script>
+</body>
+</html>
