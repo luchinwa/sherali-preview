@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e0e10">
+<meta name="robots" content="noindex, nofollow">
+<title>Визуальные направления — Шерали</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0e0e10;color:#f3f3f3;font:15px/1.5 'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1320px;margin:0 auto;padding:32px 16px 60px}
+h1{font-size:clamp(30px,5vw,48px);font-weight:800;line-height:1.05}
+.lead{color:#aaa;max-width:720px;margin:10px 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+@media(max-width:1100px){.grid{grid-template-columns:1fr;max-width:460px;margin:0 auto}}
+.col h2{font-size:24px;font-weight:800}
+.col p{color:#aaa;font-size:14px;margin:4px 0 14px;min-height:42px}
+.phone{position:relative;width:100%;max-width:390px;aspect-ratio:390/844;border-radius:44px;border:10px solid #242428;background:#000;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.9);margin:0 auto}
+.phone iframe{position:absolute;left:0;top:0;width:390px;height:844px;border:0;transform-origin:0 0}
+.open{display:block;text-align:center;margin-top:14px;font-weight:800;color:#ffd400}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tags span{font-size:12px;font-weight:700;padding:4px 9px;border-radius:999px;background:#1e1e22;color:#ccc}
+.note{margin-top:34px;padding:18px;border-radius:16px;background:#17171a;color:#bbb;font-size:14px;max-width:860px}
+.note b{color:#fff}
+@media(max-width:600px){.phone{border-width:6px;border-radius:32px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Три новых направления: другой визуал, эмоция, оффер</h1>
+  <p class="lead">Каждое — первый экран и главные блоки, как их увидят с телефона. Прокручивайте прямо внутри телефона или откройте на весь экран. Пунктиром отмечены акции, которые нужно согласовать, и места под фото гостей.</p>
+  <div class="grid">
+    <div class="col"><h2>D · Неон</h2><p>Энергия караоке-вечера: неоновые надписи, «билеты»-акции, живой статус «караоке идёт сейчас».</p>
+      <div class="tags"><span>тёмный</span><span>яркие неоны</span><span>для компаний</span></div>
+      <div class="phone"><iframe src="d.html" title="Направление D" loading="lazy"></iframe></div><a class="open" href="d.html">Открыть D на весь экран →</a></div>
+    <div class="col"><h2>E · Базар</h2><p>Светлый, тёплый, семейный: песок, терракота, шафран, тарелки с едой и ценой-стикером.</p>
+      <div class="tags"><span>светлый</span><span>аппетитный</span><span>для семей</span></div>
+      <div class="phone"><iframe src="e.html" title="Направление E" loading="lazy"></iframe></div><a class="open" href="e.html">Открыть E на весь экран →</a></div>
+    <div class="col"><h2>F · Афиша</h2><p>Дерзкий постер недели: крупные цветные плитки, каждая — оффер с кнопкой. Видно, что сегодня.</p>
+      <div class="tags"><span>контрастный</span><span>офферы</span><span>для всех</span></div>
+      <div class="phone"><iframe src="f.html" title="Направление F" loading="lazy"></iframe></div><a class="open" href="f.html">Открыть F на весь экран →</a></div>
+  </div>
+  <div class="note"><b>Что нужно от ресторана, чтобы любое направление заработало в полную силу:</b> 1) один вечер съёмки — 20–30 фото и 3–4 коротких видео с гостями (поют, празднуют, семьи за столом); 2) реальные акции: скидка именинникам, будни, бонус компании — или любые свои; 3) названия и вместимость залов.</div>
+</div>
+<script>
+// scale the 390px-wide pages to the phone frame width
+function fit(){document.querySelectorAll('.phone').forEach(function(p){var f=p.querySelector('iframe'),k=p.clientWidth/390;f.style.transform='scale('+k+')';f.style.height=(p.clientHeight/k)+'px'})}
+addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>

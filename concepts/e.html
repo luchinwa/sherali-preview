@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6ecdf">
+<meta name="robots" content="noindex, nofollow">
+<title>Направление E «Базар» — Шерали</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800;900&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root{--bg:#f6ecdf;--bg2:#fffaf3;--card:#fffaf3;--line:#e6d4bd;--text:#2a1810;--muted:#76604f;--terra:#c94f2e;--saff:#f2a535;--green:#1f5a43;--plum:#6b2d5c;--disp:'Rubik',system-ui,sans-serif}
+body{background:var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M32 4l8 20 20 8-20 8-8 20-8-20-20-8 20-8z' fill='none' stroke='%23e2cfb4' stroke-width='1.2'/%3E%3C/svg%3E")}
+.btn-gold{background:var(--terra);color:#fff;box-shadow:0 10px 24px -10px rgba(201,79,46,.8)}
+.abar{background:rgba(255,250,243,.96);border-color:var(--line)}
+.abar a,.abar button{background:#fff;border-color:var(--line)}
+.abar .btn-gold{background:var(--terra);color:#fff}
+.top.solid{background:rgba(246,236,223,.95)}
+.top .logo img{filter:brightness(0) saturate(100%) invert(10%) sepia(19%) saturate(1500%) hue-rotate(340deg)}
+.ico .n{background:var(--terra);color:#fff}
+.shade{background:rgba(42,24,16,.45)}
+.fld input,.fld select{background:#fff}
+.disp{font-family:var(--disp);font-weight:900;line-height:.95;letter-spacing:-.02em}
+/* hero */
+.hero{position:relative;padding:84px 0 calc(110px + var(--sb));overflow:hidden}
+@media(min-width:768px){.hero{padding-bottom:60px}}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:1000px){.hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;min-height:calc(100vh - 140px)}}
+.stk{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13px;padding:7px 12px;border-radius:999px;background:var(--green);color:#fff}
+.hero h1{font-size:clamp(50px,12vw,118px);color:var(--text);margin-top:14px}
+.hero h1 em{font-style:normal;color:var(--terra)}
+.hero h1 u{text-decoration:none;background:linear-gradient(transparent 62%,var(--saff) 62%)}
+.hero p{font-size:17px;color:var(--muted);max-width:520px;margin:16px 0 22px}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap}
+.hero .row .btn{flex:1 1 auto}
+@media(min-width:768px){.hero .row .btn{flex:0 0 auto}}
+.btn-out{background:#fff;border:2px solid var(--text);color:var(--text)}
+/* plates */
+.plates{position:relative;aspect-ratio:1;max-width:560px;width:100%;justify-self:center}
+.pl{position:absolute;border-radius:50%;overflow:hidden;box-shadow:0 18px 40px -16px rgba(42,24,16,.55);border:6px solid #fff;animation:float 6s ease-in-out infinite}
+.pl img{width:100%;height:100%;object-fit:cover}
+.pl:nth-child(1){width:62%;left:19%;top:16%;z-index:2}
+.pl:nth-child(2){width:36%;left:0;top:0;animation-delay:-2s}
+.pl:nth-child(3){width:34%;right:0;top:4%;animation-delay:-4s}
+.pl:nth-child(4){width:32%;left:4%;bottom:0;animation-delay:-1s}
+.pl:nth-child(5){width:36%;right:2%;bottom:2%;animation-delay:-3s}
+@keyframes float{50%{transform:translateY(-8px) rotate(2deg)}}
+.price{position:absolute;z-index:3;font-family:var(--disp);font-weight:900;background:var(--saff);color:var(--text);border-radius:50%;width:92px;height:92px;display:grid;place-items:center;text-align:center;line-height:1;font-size:13px;transform:rotate(-12deg);box-shadow:0 8px 20px -8px rgba(42,24,16,.5);right:16%;top:44%}
+.price b{display:block;font-size:22px}
+/* offers */
+section{padding:56px 0 0}
+.h{font-size:clamp(34px,6vw,60px);margin-bottom:18px}
+.offers{display:grid;gap:12px}
+@media(min-width:900px){.offers{grid-template-columns:repeat(3,1fr)}}
+.of{border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:8px;color:#fff;min-height:200px;position:relative;overflow:hidden}
+.of .big{font-family:var(--disp);font-weight:900;font-size:42px;line-height:.95}
+.of span{opacity:.9;font-size:15px}
+.of .btn{margin-top:auto;background:#fff;color:var(--text);box-shadow:none;min-height:46px;font-size:14px;align-self:flex-start}
+.of.t{background:var(--terra)}.of.g{background:var(--green)}.of.p{background:var(--plum)}
+.of .ph{outline-color:#fff}
+.of::after{content:"";position:absolute;right:-30px;top:-30px;width:120px;height:120px;border-radius:50%;border:16px solid rgba(255,255,255,.14)}
+/* who */
+.who{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:900px){.who{grid-template-columns:repeat(4,1fr)}}
+.wh{border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+.wh img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.wh div{padding:12px 14px 14px}
+.wh b{display:block;font-family:var(--disp);font-size:18px;line-height:1.1}
+.wh span{font-size:13px;color:var(--muted)}
+.ph-slot{border:2px dashed var(--terra);border-radius:22px;padding:22px;color:var(--terra);font-weight:800;text-align:center;font-size:14px;background:rgba(255,255,255,.5)}
+footer{border-color:var(--line)}
+.toast{background:var(--text);color:#fff}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="v2.html"><img src="../img/logo.png" alt="Шерали"></a><div class="sp"></div>
+  <a class="ico" href="tel:+74212575555" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  <a class="ico" href="../menu.html#table" aria-label="Ваш стол"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11h18M5 11l1.5 9h11L19 11M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="n" data-cart-n hidden></span></a>
+  <button class="btn btn-gold" data-book>Забронировать</button>
+</div></header>
+
+<section class="hero" style="padding-top:84px">
+  <div class="wrap">
+    <div>
+      <span class="stk" id="stk"></span>
+      <h1 class="disp">Плов, <em>шашлык</em> и <u>песни</u> до ночи</h1>
+      <p>Восточная кухня, мангал на углях и караоке в центре Хабаровска. С детьми, с друзьями, на праздник — для всех найдётся стол.</p>
+      <div class="row">
+        <button class="btn btn-gold" data-book>Забронировать стол</button>
+        <a class="btn btn-out" href="../menu.html">Смотреть меню</a>
+      </div>
+    </div>
+    <div class="plates" id="plates"></div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section>
+    <h2 class="disp h">Повод прийти <span style="color:var(--terra)">на этой неделе</span></h2>
+    <div class="offers">
+      <div class="of t"><div class="big">День рождения?</div><span><span class="ph" title="Размер скидки согласовать">Скидка имениннику −__%</span> и караоке на весь вечер.</span><button class="btn" data-book="Праздник">Забронировать</button></div>
+      <div class="of g"><div class="big">Пн–Ср</div><span><span class="ph" title="Акцию согласовать">−__% на кухню</span>: спокойный ужин в будни.</span><button class="btn" data-book="Ужин">Стол на будни</button></div>
+      <div class="of p"><div class="big">С детьми</div><span>Детская с аниматором до 00:00, пока вы ужинаете и поёте.</span><button class="btn" data-book="Ужин">Семейный стол</button></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="disp h">Вы к нам…</h2>
+    <div class="who">
+      <a class="wh" href="#" data-book="Караоке-вечер"><img src="../img/karaoke.jpg" alt="" loading="lazy"><div><b>Петь с друзьями</b><span>Караоке чт–вс с 19:00</span></div></a>
+      <a class="wh" href="#" data-book="Праздник"><img src="../img/hall-big.jpg" alt="" loading="lazy"><div><b>На праздник</b><span>Отдельный зал, банкет</span></div></a>
+      <a class="wh" href="#" data-book="Ужин"><img src="../img/kids.jpg" alt="" loading="lazy"><div><b>С детьми</b><span>Детская с аниматором</span></div></a>
+      <a class="wh" href="../menu.html"><img id="eatImg" alt="" loading="lazy"><div><b>Вкусно поесть</b><span>84 блюда и бар</span></div></a>
+    </div>
+  </section>
+
+  <section><div class="ph-slot">Сюда — фото и видео гостей: поющие компании, именинники, семьи за столом</div></section>
+</main>
+<footer><div class="wrap">Направление E «Базар»: светлое, тёплое, семейное. Пунктир — что согласовать или снять.</div></footer>
+
+<div class="abar">
+  <a href="tel:+74212575555"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Звонок</a>
+  <a href="../menu.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg>Меню</a>
+  <button class="btn-gold" data-book>Забронировать</button>
+</div>
+<div class="toast" id="toast"></div>
+<script src="../menu-data.js"></script>
+<script src="kit.js"></script>
+<script>
+(function(){
+  var K=KIT,T=K.time;
+  document.getElementById('stk').textContent=T.open?'● Открыто до '+T.until:'Откроемся в 12:00';
+  var P=['plov','hachapuri','manty','shashlyk','lagman-s-telyatinoy'].filter(function(id){return K.byId[id]});
+  document.getElementById('plates').innerHTML=P.map(function(id){return '<div class="pl"><img src="'+K.img(id,1)+'" alt="'+K.byId[id].name+'"></div>'}).join('')+
+    '<div class="price">плов<b>от '+K.rub(K.minP(K.byId.plov))+'</b></div>';
+  document.getElementById('eatImg').src=K.img('kazan-kabob',1);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0612">
+<meta name="robots" content="noindex, nofollow">
+<title>Направление D «Неон» — Шерали</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800;900&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root{--bg:#0a0612;--bg2:#160c22;--card:#1a0f28;--line:#3a2356;--text:#fff;--muted:#bfb0d6;--pink:#ff2e88;--cyan:#22e4ff;--yel:#ffe14d;--disp:'Unbounded',system-ui,sans-serif}
+body{background:var(--bg)}
+.btn-gold{background:var(--pink);color:#fff;box-shadow:0 0 0 0 rgba(255,46,136,.6),0 10px 30px -8px rgba(255,46,136,.8);animation:beat 1.8s infinite}
+@keyframes beat{50%{box-shadow:0 0 0 10px rgba(255,46,136,0),0 10px 30px -8px rgba(255,46,136,.8)}}
+.abar .btn-gold{background:var(--pink);color:#fff}
+.ico .n{background:var(--pink);color:#fff}
+.disp{font-family:var(--disp);font-weight:900;line-height:.92;letter-spacing:-.01em;text-transform:uppercase}
+.neon{color:#fff;text-shadow:0 0 6px #fff,0 0 18px var(--pink),0 0 42px var(--pink),0 0 80px var(--pink)}
+.neon-c{color:#eaffff;text-shadow:0 0 6px #fff,0 0 18px var(--cyan),0 0 42px var(--cyan)}
+.flick{animation:flick 6s infinite}
+@keyframes flick{0%,19%,21%,23%,80%,100%{opacity:1}20%,22%{opacity:.35}81%{opacity:.7}}
+/* hero */
+.hero{position:relative;min-height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:90px 0 calc(100px + var(--sb))}
+@media(min-width:768px){.hero{padding-bottom:60px}}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:70% 30%;filter:saturate(1.3) contrast(1.05)}
+.hero .bg::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 50% at 80% 25%,rgba(255,46,136,.35),transparent 70%),linear-gradient(180deg,rgba(10,6,18,.3),rgba(10,6,18,.1) 30%,rgba(10,6,18,.92) 70%,var(--bg))}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.live{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:13px;padding:7px 12px;border-radius:999px;border:1.5px solid var(--cyan);color:var(--cyan);box-shadow:0 0 16px rgba(34,228,255,.35) inset,0 0 16px rgba(34,228,255,.25);margin-bottom:18px}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);animation:flick 2s infinite}
+.hero h1{font-size:clamp(54px,14vw,150px)}
+.hero h1 span{display:block}
+.hero p{font-size:17px;color:#e6dcf5;max-width:520px;margin:18px 0 22px}
+.bar{height:6px;border-radius:3px;background:rgba(255,255,255,.15);overflow:hidden;max-width:520px;margin-bottom:22px}
+.bar i{display:block;height:100%;width:38%;background:linear-gradient(90deg,var(--cyan),var(--pink));box-shadow:0 0 12px var(--pink);animation:prog 8s linear infinite}
+@keyframes prog{from{width:0}to{width:100%}}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap}
+.hero .row .btn{flex:1 1 auto}
+@media(min-width:768px){.hero .row .btn{flex:0 0 auto}}
+.btn-line{background:transparent;border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.slot{position:absolute;right:16px;top:86px;z-index:2;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px;border-radius:8px;border:1.5px dashed var(--yel);color:var(--yel);max-width:170px;text-align:right}
+/* tickets */
+section{padding:64px 0 0}
+.h{font-size:clamp(30px,6vw,56px);margin-bottom:18px}
+.tix{display:grid;grid-auto-flow:column;grid-auto-columns:84%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 8px;scrollbar-width:none}
+.tix::-webkit-scrollbar{display:none}
+@media(min-width:900px){.tix{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible;margin:0;padding:0}}
+.tk{scroll-snap-align:start;position:relative;border-radius:20px;padding:22px 20px;background:var(--card);border:1.5px solid var(--line);overflow:hidden;display:flex;flex-direction:column;gap:10px;min-height:220px}
+.tk::before,.tk::after{content:"";position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:var(--bg);margin-top:-13px}
+.tk::before{left:-13px}.tk::after{right:-13px}
+.tk .big{font-family:var(--disp);font-weight:900;font-size:46px;line-height:.9}
+.tk.p{border-color:var(--pink);box-shadow:0 0 24px rgba(255,46,136,.25)}.tk.p .big{color:var(--pink)}
+.tk.c{border-color:var(--cyan);box-shadow:0 0 24px rgba(34,228,255,.2)}.tk.c .big{color:var(--cyan)}
+.tk.y{border-color:var(--yel);box-shadow:0 0 24px rgba(255,225,77,.18)}.tk.y .big{color:var(--yel)}
+.tk b{font-size:17px}
+.tk span{font-size:14px;color:var(--muted)}
+.tk .btn{margin-top:auto;min-height:44px;font-size:14px;animation:none;box-shadow:none}
+/* songs + food */
+.food{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(min-width:900px){.food{grid-template-columns:repeat(4,1fr)}}
+.fd{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;background:#000}
+.fd img{width:100%;height:100%;object-fit:cover}
+.fd::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,6,18,.95))}
+.fd div{position:absolute;left:12px;right:12px;bottom:12px;z-index:1}
+.fd b{display:block;font-family:var(--disp);font-size:16px;line-height:1.05;text-transform:uppercase}
+.fd span{font-size:13px;color:var(--yel);font-weight:800}
+.who{display:grid;gap:10px}
+@media(min-width:900px){.who{grid-template-columns:repeat(4,1fr)}}
+.wh{display:flex;align-items:center;gap:14px;padding:16px;border-radius:18px;border:1.5px solid var(--line);background:var(--card)}
+.wh .e{font-size:30px}
+.wh b{display:block;font-family:var(--disp);font-size:15px;text-transform:uppercase}
+.wh span{font-size:13px;color:var(--muted)}
+.wh:hover{border-color:var(--pink)}
+.ph-slot{border:1.5px dashed var(--yel);border-radius:18px;padding:22px;color:var(--yel);font-weight:700;text-align:center;font-size:14px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="v2.html"><img src="../img/logo.png" alt="Шерали"></a><div class="sp"></div>
+  <a class="ico" href="tel:+74212575555" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  <a class="ico" href="../menu.html#table" aria-label="Ваш стол"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11h18M5 11l1.5 9h11L19 11M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="n" data-cart-n hidden></span></a>
+  <button class="btn btn-gold" data-book="Караоке-вечер">Забронировать</button>
+</div></header>
+
+<section class="hero" style="padding-top:90px">
+  <div class="bg"><img src="../img/karaoke.jpg" alt=""></div>
+  <div class="slot">Сюда — видео 10 сек с ваших вечеров</div>
+  <div class="wrap">
+    <div class="live"><i></i><span id="live"></span></div>
+    <h1 class="disp"><span class="neon flick">Поём</span><span>до 02:00</span></h1>
+    <p>Караоке-ресторан в центре Хабаровска. Звукорежиссёр держит звук, вокалист подпоёт, а пока вы на сцене — дети с аниматором.</p>
+    <div class="bar"><i></i></div>
+    <div class="row">
+      <button class="btn btn-gold" data-book="Караоке-вечер">Забронировать стол</button>
+      <a class="btn btn-line" href="../menu.html">Меню и бар</a>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section>
+    <h2 class="disp h">Поводы <span class="neon-c">прийти</span></h2>
+    <div class="tix">
+      <div class="tk p"><div class="big">ДР</div><b>Именинникам <span class="ph" title="Размер скидки согласовать с рестораном">−__%</span></b><span><span class="ph" title="Условия согласовать">В день рождения и 3 дня после.</span> Вокалист и звукорежиссёр сделают ваш вечер.</span><button class="btn btn-gold" data-book="Праздник">Забронировать ДР</button></div>
+      <div class="tk c"><div class="big">ПН–СР</div><b>Тихие будни <span class="ph" title="Акцию согласовать с рестораном">−__% на кухню</span></b><span>Спокойный ужин в будни, пока зал свободнее.</span><button class="btn btn-gold" data-book="Ужин">Стол на будни</button></div>
+      <div class="tk y"><div class="big">6+</div><b>Компания от 6 гостей</b><span><span class="ph" title="Бонус согласовать">Бонус для стола: сет шотов / десерт</span> и стол ближе к сцене.</span><button class="btn btn-gold" data-book="Караоке-вечер">Стол на компанию</button></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="disp h">Еда <span class="neon">между песнями</span></h2>
+    <div class="food" id="food"></div>
+  </section>
+
+  <section>
+    <h2 class="disp h">Вы к нам…</h2>
+    <div class="who">
+      <a class="wh" href="#" data-book="Караоке-вечер"><span class="e">🎤</span><div><b>С друзьями петь</b><span>Чт–вс с 19:00</span></div></a>
+      <a class="wh" href="#" data-book="Праздник"><span class="e">🎉</span><div><b>На праздник</b><span>ДР, корпоратив, юбилей</span></div></a>
+      <a class="wh" href="#" data-book="Ужин"><span class="e">🧸</span><div><b>С детьми</b><span>Детская с аниматором до 00:00</span></div></a>
+      <a class="wh" href="../menu.html"><span class="e">🍢</span><div><b>Просто поесть</b><span>Плов, мангал, хачапури</span></div></a>
+    </div>
+  </section>
+
+  <section><div class="ph-slot">Сюда — лента фото гостей с вечеров (снять за 1 вечер, ~30 кадров)</div></section>
+</main>
+<footer><div class="wrap">Направление D «Неон»: энергия караоке. Пунктир — что согласовать или снять.</div></footer>
+
+<div class="abar">
+  <a href="tel:+74212575555"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Звонок</a>
+  <a href="../menu.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg>Меню</a>
+  <button class="btn-gold" data-book="Караоке-вечер">Забронировать</button>
+</div>
+<div class="toast" id="toast"></div>
+<script src="../menu-data.js"></script>
+<script src="kit.js"></script>
+<script>
+(function(){
+  var K=KIT,T=K.time;
+  document.getElementById('live').textContent=T.karaokeNow?'Караоке идёт сейчас':(T.karaokeDay?'Сегодня караоке с 19:00':'Караоке чт–вс с 19:00');
+  var F=['shashlyk','hachapuri','plov','kazan-kabob'].filter(function(id){return K.byId[id]});
+  document.getElementById('food').innerHTML=F.map(function(id){var d=K.byId[id];return '<a class="fd" href="../menu.html#'+d.sec+'"><img src="'+K.img(id,1)+'" alt="" loading="lazy"><div><b>'+d.name+'</b><span>от '+K.rub(K.minP(d))+'</span></div></a>'}).join('');
+})();
+</script>
+</body>
+</html>

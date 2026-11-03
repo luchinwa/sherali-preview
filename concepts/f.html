@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111">
+<meta name="robots" content="noindex, nofollow">
+<title>Направление F «Афиша» — Шерали</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+:root{--bg:#111;--bg2:#1b1b1b;--card:#1b1b1b;--line:#333;--text:#fff;--muted:#bdbdbd;--mag:#e6007e;--yel:#ffd400;--blue:#2b4bff;--disp:'Oswald',system-ui,sans-serif}
+.btn-gold{background:var(--yel);color:#111;box-shadow:none}
+.abar .btn-gold{background:var(--yel);color:#111}
+.ico .n{background:var(--yel);color:#111}
+.disp{font-family:var(--disp);font-weight:700;line-height:.9;text-transform:uppercase;letter-spacing:-.005em}
+main.wrap{padding-top:72px}
+/* poster grid */
+.poster{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.tile{position:relative;overflow:hidden;border-radius:6px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;min-height:150px;color:#111}
+.tile .k{font-family:var(--disp);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.tile h2,.tile h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;line-height:.88}
+.tile .go{align-self:flex-start;margin-top:12px;font-weight:800;font-size:14px;padding:9px 14px;border-radius:999px;background:#111;color:#fff;border:0}
+.t-hero{grid-column:span 6;min-height:min(78svh,640px);background:#000;color:#fff;padding:20px}
+.t-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%;filter:grayscale(.2) contrast(1.1)}
+.t-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.1) 35%,rgba(0,0,0,.85))}
+.t-hero>*{position:relative;z-index:1}
+.t-hero h1{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:clamp(66px,19vw,200px);line-height:.84}
+.t-hero h1 span{color:var(--yel)}
+.t-hero h1{margin-bottom:14px}
+.t-hero .days{display:flex;gap:6px;flex-wrap:wrap}
+.t-hero .days b{font-family:var(--disp);font-size:20px;padding:4px 10px;border:2px solid #fff;border-radius:6px}
+.t-hero .days b.on{background:var(--yel);color:#111;border-color:var(--yel)}
+.t-hero .days b.off{opacity:.35}
+.t-hero .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.t-hero .row .btn{flex:1 1 auto}
+@media(min-width:768px){.t-hero .row .btn{flex:0 0 auto}}
+.btn-w{background:#fff;color:#111}
+.t-mag{grid-column:span 3;background:var(--mag);color:#fff}.t-mag .go{background:#fff;color:#111}
+.t-yel{grid-column:span 3;background:var(--yel)}
+.t-blue{grid-column:span 6;background:var(--blue);color:#fff}.t-blue .go{background:var(--yel);color:#111}
+.t-food{grid-column:span 3;background:#000;color:#fff;min-height:220px}
+.t-food img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.8}
+.t-food::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.85))}
+.t-food>*{position:relative;z-index:1}
+.t-food .pr{font-family:var(--disp);font-size:28px;color:var(--yel)}
+.t-white{grid-column:span 6;background:#fff}
+.tile h2{font-size:clamp(40px,10vw,84px)}
+.tile h3{font-size:clamp(30px,7vw,52px)}
+.tile p{font-size:14px;font-weight:600;margin-top:6px;max-width:420px}
+.t-mag .ph,.t-blue .ph{outline-color:#fff}
+.t-yel .ph,.t-white .ph{outline-color:#111}
+@media(min-width:900px){
+  .poster{gap:10px}
+  .t-hero{grid-column:span 4;grid-row:span 2;min-height:640px;padding:28px}
+  .t-mag,.t-yel{grid-column:span 2}
+  .t-food{grid-column:span 2;min-height:260px}
+  .t-blue{grid-column:span 4}
+  .t-white{grid-column:span 6}
+}
+.wk{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:10px}
+.wk div{border:2px solid #111;border-radius:4px;padding:6px 2px;text-align:center;font-family:var(--disp)}
+.wk div b{display:block;font-size:18px}
+.wk div small{font-size:11px;font-family:var(--sans);font-weight:700}
+.wk div.k{background:#111;color:var(--yel)}
+.wk div.today{outline:3px solid var(--mag);outline-offset:1px}
+.ph-slot{grid-column:span 6;border:2px dashed var(--yel);border-radius:6px;padding:20px;color:var(--yel);font-weight:800;text-align:center;font-size:14px}
+footer{margin-top:40px}
+</style>
+</head>
+<body>
+<header class="top solid"><div class="wrap">
+  <a class="logo" href="v2.html"><img src="../img/logo.png" alt="Шерали"></a><div class="sp"></div>
+  <a class="ico" href="tel:+74212575555" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  <a class="ico" href="../menu.html#table" aria-label="Ваш стол"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11h18M5 11l1.5 9h11L19 11M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="n" data-cart-n hidden></span></a>
+  <button class="btn btn-gold" data-book>Забронировать</button>
+</div></header>
+
+<main class="wrap">
+  <div class="poster">
+    <div class="tile t-hero">
+      <img src="../img/karaoke.jpg" alt="">
+      <div class="days" id="days"></div>
+      <div>
+        <h1>Караоке<br><span>с 19:00</span></h1>
+        <p style="color:#eee;font-size:16px;max-width:460px">Звукорежиссёр, вокалист, сцена. Пт и сб — до 02:00.</p>
+        <div class="row"><button class="btn btn-gold" data-book="Караоке-вечер">Забронировать стол</button><a class="btn btn-w" href="../menu.html">Меню и бар</a></div>
+      </div>
+    </div>
+    <div class="tile t-mag"><div class="k">День рождения</div><div><h3>Имениннику <span class="ph" title="Размер скидки согласовать">−__%</span></h3><p>Отмечайте с караоке и отдельным залом.</p><button class="go" data-book="Праздник">Забронировать</button></div></div>
+    <div class="tile t-yel"><div class="k">Пн · Вт · Ср</div><div><h3><span class="ph" title="Акцию согласовать">−__%</span> на кухню</h3><p>Спокойный ужин в будни.</p><button class="go" data-book="Ужин">Стол на будни</button></div></div>
+    <a class="tile t-food" id="f1" href="../menu.html#mangal"></a>
+    <a class="tile t-food" id="f2" href="../menu.html#hot"></a>
+    <div class="tile t-blue"><div class="k">Банкеты</div><div><h2>Праздник от ≈ <span id="bq"></span>/гость</h2><p>Стол «Садж на компанию» по ценам меню, без напитков. Зал, караоке и детская — уже в месте.</p><button class="go" data-book="Праздник">Рассчитать праздник</button></div></div>
+    <div class="tile t-white"><div class="k">Неделя в Шерали</div><div class="wk" id="wk"></div><p>Детская с аниматором каждый день, дети с нами до 00:00 · Гостиница «Ариранг» в том же комплексе</p></div>
+    <div class="ph-slot">Сюда — плитки с фото гостей: «как это было в прошлую пятницу»</div>
+  </div>
+</main>
+<footer><div class="wrap">Направление F «Афиша»: дерзкий постер недели, каждая плитка — оффер с кнопкой. Пунктир — что согласовать или снять.</div></footer>
+
+<div class="abar">
+  <a href="tel:+74212575555"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Звонок</a>
+  <a href="../menu.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg>Меню</a>
+  <button class="btn-gold" data-book>Забронировать</button>
+</div>
+<div class="toast" id="toast"></div>
+<script src="../menu-data.js"></script>
+<script src="kit.js"></script>
+<script>
+(function(){
+  var K=KIT,T=K.time,B=K.byId,rub=K.rub;
+  var D=[[1,'Пн'],[2,'Вт'],[3,'Ср'],[4,'Чт'],[5,'Пт'],[6,'Сб'],[0,'Вс']];
+  document.getElementById('days').innerHTML=D.map(function(d){var k=[0,4,5,6].indexOf(d[0])>-1;return '<b class="'+(d[0]===T.day?'on':(k?'':'off'))+'">'+d[1]+'</b>'}).join('');
+  var H={1:'12–22',2:'12–22',3:'12–22',4:'12–00',5:'12–02',6:'12–02',0:'12–00'};
+  document.getElementById('wk').innerHTML=D.map(function(d){var k=[0,4,5,6].indexOf(d[0])>-1;return '<div class="'+(k?'k':'')+(d[0]===T.day?' today':'')+'"><b>'+d[1]+'</b><small>'+(k?'🎤 ':'')+H[d[0]]+'</small></div>'}).join('');
+  function food(el,id,kick){var d=B[id];if(!d)return;document.getElementById(el).innerHTML='<img src="'+K.img(id,1)+'" alt="" loading="lazy"><div class="k">'+kick+'</div><div><h3>'+d.name+'</h3><div class="pr">от '+rub(K.minP(d))+'</div></div>'}
+  food('f1','shashlyk','Мангал на углях');food('f2','plov','Восточная классика');
+  // banquet hint: sadzh table for 4 (sadzh, khachapuri, vegetables, bread basket) per guest, from menu prices
+  var set=[['sadzh',0],['hachapuri',0],['svezhie-sezonnye-ovoschi-i-zelen',0],['hlebnaya-korzina',0]].filter(function(x){return B[x[0]]});
+  var sum=set.reduce(function(a,x){return a+B[x[0]].vars[x[1]].p},0);
+  document.getElementById('bq').textContent=rub(Math.round(sum/4/10)*10);
+})();
+</script>
+</body>
+</html>
