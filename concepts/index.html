@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120c16">
+<meta name="robots" content="noindex, nofollow">
+<title>Концепты главной — Шерали</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+main{padding:40px 0 60px}
+h1{font-size:clamp(44px,7vw,84px)}
+.lead{color:var(--muted);max-width:640px;margin:12px 0 32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:960px){.grid{grid-template-columns:1fr}}
+.c{display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:var(--card);border:1px solid var(--line);transition:transform .2s,border-color .2s}
+.c:hover{transform:translateY(-4px);border-color:var(--gold)}
+.c .im{position:relative;aspect-ratio:4/3;overflow:hidden}
+.c img{width:100%;height:100%;object-fit:cover}
+.c .im span{position:absolute;left:14px;top:14px;font-family:var(--serif);font-size:48px;line-height:1;color:var(--gold-2);text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.c .b{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.c h2{font-family:var(--serif);font-size:36px;line-height:1}
+.c p{color:var(--muted);font-size:15px}
+.c ul{list-style:none;display:grid;gap:6px;font-size:14px}
+.c li::before{content:"✦ ";color:var(--gold)}
+.c .for{font-size:13px;padding:10px 12px;border-radius:12px;background:rgba(227,176,75,.1);color:var(--gold-2);margin-top:auto}
+.c .btn{margin-top:8px}
+.note{margin-top:28px;color:var(--muted);font-size:14px}
+.note a{color:var(--gold-2);text-decoration:underline}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <img src="../img/logo.png" alt="Шерали" style="height:44px;width:auto;margin-bottom:28px">
+  <div class="eyebrow">Главная · 3 концепта</div>
+  <h1 class="serif">Как будем продавать</h1>
+  <p class="lead">Три разных подхода к первому экрану и главной. Все на реальных фото и ценах ресторана, удобны с телефона. Открывайте с мобильного: так их увидит большинство гостей.</p>
+  <div class="grid">
+    <a class="c" href="a.html">
+      <div class="im"><img src="../img/menu/d/shashlyk.jpg" alt=""><span>A</span></div>
+      <div class="b"><h2>Аппетит</h2>
+        <p>Первый экран — сторис из блюд: шашлык, плов, хачапури, садж, манты. Листаются касанием, у каждого цена и «+ на стол».</p>
+        <ul><li>Продаёт едой с первой секунды</li><li>Заказ с главной в один тап, стол общий с меню</li><li>Подборки «под настроение» ведут в нужный раздел</li></ul>
+        <div class="for">Сильнее всего для: ужинов, доставки, гостей «просто поесть»</div>
+        <span class="btn btn-gold">Открыть концепт A</span></div>
+    </a>
+    <a class="c" href="b.html">
+      <div class="im"><img src="../img/karaoke.jpg" alt=""><span>B</span></div>
+      <div class="b"><h2>Вечер в Шерали</h2>
+        <p>Главная живёт по часам Хабаровска: днём зовёт на обед, в четверг вечером пишет «караоке уже началось», ночью предлагает бронь на завтра.</p>
+        <ul><li>Продаёт впечатление: ужин → сцена → детская → ночь</li><li>Неделя с часами и днями караоке на виду</li><li>Бронь начинается с вопроса «какой вечер?»</li></ul>
+        <div class="for">Сильнее всего для: караоке, компаний, семей с детьми</div>
+        <span class="btn btn-gold">Открыть концепт B</span></div>
+    </a>
+    <a class="c" href="c.html">
+      <div class="im"><img src="../img/hall-big.jpg" alt=""><span>C</span></div>
+      <div class="b"><h2>Праздник под ключ</h2>
+        <p>Первый экран — калькулятор: повод, гости, тип стола (мангал, восточный, садж) и сразу «≈ N ₽ на гостя» по ценам меню.</p>
+        <ul><li>Продаёт самый высокий чек — банкеты</li><li>Гость видит цену до звонка, заявка теплее</li><li>Залы, что включено, как проходит</li></ul>
+        <div class="for">Сильнее всего для: дней рождения, корпоративов, юбилеев</div>
+        <span class="btn btn-gold">Открыть концепт C</span></div>
+    </a>
+  </div>
+  <p class="note">Концепты можно смешивать: например, первый экран из B, блюда из A и калькулятор C отдельным блоком. Текущая версия главной: <a href="../index.html">здесь</a>, меню: <a href="../menu.html">здесь</a>.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120c16">
+<meta name="robots" content="noindex, nofollow">
+<title>Концепт B «Вечер в Шерали» — Шерали</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:110px 0 calc(100px + var(--sb));overflow:hidden}
+@media(min-width:768px){.hero{padding-bottom:64px}}
+.hero .bg{position:absolute;inset:0}
+.hero .bg img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 70% 20%,rgba(138,79,214,.28),transparent 60%),linear-gradient(180deg,rgba(18,12,22,.5),rgba(18,12,22,.25) 35%,rgba(18,12,22,.95) 85%)}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.now{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:14px;margin-bottom:16px}
+.now .clock{font-family:var(--serif);font-size:20px;color:var(--gold-2)}
+.hero h1{font-size:clamp(50px,9.5vw,112px);max-width:980px}
+.hero p{font-size:18px;color:#e6dcea;max-width:600px;margin:14px 0 24px}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap}
+.hero .row .btn{flex:1 1 auto}
+@media(min-width:768px){.hero .row .btn{flex:0 0 auto}}
+/* week */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:-34px;position:relative;z-index:2}
+.dd{border-radius:16px;background:var(--card);border:1px solid var(--line);padding:12px 6px;text-align:center}
+.dd b{display:block;font-size:13px}
+.dd small{display:block;font-size:11px;color:var(--muted);line-height:1.3;margin-top:3px}
+.dd i{font-style:normal;display:block;font-size:16px;margin-top:4px;min-height:20px}
+.dd.today{border-color:var(--gold);background:rgba(227,176,75,.1)}
+.dd.today b{color:var(--gold-2)}
+@media(max-width:600px){.dd{padding:10px 2px}.dd small{font-size:10px}}
+section{padding:80px 0 0}
+.h2{font-size:clamp(38px,5.5vw,62px);margin-bottom:8px}
+.lead{color:var(--muted);max-width:620px}
+/* timeline */
+.tl{position:relative;margin-top:34px;display:grid;gap:18px}
+.tl::before{content:"";position:absolute;left:23px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--gold),rgba(227,176,75,.1))}
+.step{position:relative;display:grid;grid-template-columns:48px 1fr;gap:14px}
+.step .t{width:48px;height:48px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);display:grid;place-items:center;font-size:11px;font-weight:800;color:var(--gold-2);z-index:1}
+.step .c{border-radius:22px;overflow:hidden;background:var(--card);border:1px solid var(--line);display:grid;grid-template-columns:1fr}
+.step .c .im{aspect-ratio:16/9;overflow:hidden}
+.step .c img{width:100%;height:100%;object-fit:cover}
+.step .c .tx{padding:18px}
+.step h3{font-family:var(--serif);font-size:32px;line-height:1.05}
+.step p{color:var(--muted);font-size:15px;margin-top:6px}
+.step .links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.step .links a{height:36px;padding:0 12px;border-radius:12px;border:1px solid var(--line);display:inline-flex;align-items:center;font-size:13px;font-weight:700}
+.step .links a b{color:var(--gold-2);margin-left:6px}
+@media(min-width:900px){
+  .tl::before{left:50%;margin-left:-1px}
+  .step{grid-template-columns:1fr 64px 1fr;gap:24px}
+  .step .t{grid-column:2;width:64px;height:64px;font-size:13px;margin-top:30px}
+  .step .c{grid-column:1;grid-row:1;grid-template-columns:1fr}
+  .step:nth-child(even) .c{grid-column:3}
+  .step .c{grid-template-columns:1fr 1fr}
+  .step .c .im{aspect-ratio:auto;min-height:240px}
+}
+/* plan */
+.plan{margin-top:80px;border-radius:28px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;background:var(--card);border:1px solid var(--line)}
+.plan .pic{position:relative;min-height:300px;outline:0}
+.plan .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.plan .tx{padding:30px}
+.plan h2{font-size:clamp(34px,4.5vw,50px)}
+.opts{display:grid;gap:10px;margin:18px 0}
+.opt{display:flex;gap:14px;align-items:center;padding:14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03);text-align:left;width:100%}
+.opt b{display:block;font-size:16px}
+.opt span{font-size:13px;color:var(--muted)}
+.opt .em{font-size:26px}
+.opt:hover{border-color:var(--gold)}
+@media(max-width:800px){.plan{grid-template-columns:1fr}.plan .pic{min-height:200px}.plan .tx{padding:22px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html"><img src="../img/logo.png" alt="Шерали"></a><div class="sp"></div>
+  <nav><a href="#evening">Вечер</a><a href="../menu.html">Меню</a><a href="#plan">Бронь</a><a href="#contacts">Контакты</a></nav>
+  <a class="ico" href="tel:+74212575555" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  <a class="ico" href="../menu.html#table" aria-label="Ваш стол"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11h18M5 11l1.5 9h11L19 11M8 11V7a4 4 0 0 1 8 0v4"/></svg><span class="n" data-cart-n hidden></span></a>
+  <button class="btn btn-gold" data-book="Караоке-вечер">Забронировать</button>
+</div></header>
+<div class="concept-tag">Концепт B · <a href="index.html">все</a></div>
+
+<section class="hero" style="padding-top:110px">
+  <div class="bg"><img src="../img/hero.jpg" alt="Зал ресторана Шерали"></div>
+  <div class="wrap">
+    <div class="now"><i class="dot" id="dot"></i><span id="nowTxt"></span><span class="clock" id="clock"></span></div>
+    <h1 class="serif" id="hT"></h1>
+    <p id="hP"></p>
+    <div class="row">
+      <button class="btn btn-gold" id="hCta"></button>
+      <a class="btn btn-ghost" href="../menu.html">Меню и бар</a>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="week" id="week"></div>
+
+  <section id="evening">
+    <div class="eyebrow">Как проходит вечер</div>
+    <h2 class="serif h2">Ужин, сцена и никаких «нам пора, дети устали»</h2>
+    <p class="lead">Всё в одном месте: кухня, караоке со звукорежиссёром, детская с аниматором и номера в гостинице «Ариранг» в этом же комплексе.</p>
+    <div class="tl" id="tl"></div>
+  </section>
+
+  <div class="plan" id="plan">
+    <div class="pic"><img src="../img/hall-east.jpg" alt="Восточный зал" loading="lazy"></div>
+    <div class="tx">
+      <div class="eyebrow">Бронь за минуту</div>
+      <h2 class="serif">Какой вечер планируете?</h2>
+      <div class="opts">
+        <button class="opt" data-book="Ужин"><span class="em">🍽</span><div><b>Ужин</b><span>Стол на двоих или для семьи</span></div></button>
+        <button class="opt" data-book="Караоке-вечер"><span class="em">🎤</span><div><b>Караоке-вечер</b><span>Чт–вс с 19:00, стол ближе к сцене</span></div></button>
+        <button class="opt" data-book="Праздник"><span class="em">🎉</span><div><b>Праздник</b><span>День рождения, корпоратив, юбилей</span></div></button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer id="contacts"><div class="wrap">Хабаровск, пер. Свободный, 11 · +7 (4212) 57-55-55<br>Концепт B «Вечер в Шерали»: продаёт впечатление, первый экран меняется по времени суток.</div></footer>
+
+<div class="abar">
+  <a href="tel:+74212575555"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Звонок</a>
+  <a href="../menu.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg>Меню</a>
+  <button class="btn-gold" data-book="Караоке-вечер">Забронировать</button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="../menu-data.js"></script>
+<script src="kit.js"></script>
+<script>
+(function(){
+  var K=KIT,T=K.time,B=K.byId,rub=K.rub;
+  // hero follows the clock in Khabarovsk
+  var h,p,cta,preset;
+  if(!T.open&&T.min<720){h='Откроемся в 12:00 — займите стол на вечер';p='Оставьте заявку сейчас, администратор подтвердит её днём.'+(T.karaokeDay?' Сегодня караоке с 19:00.':'');cta='Забронировать на сегодня';preset=T.karaokeDay?'Караоке-вечер':'Ужин'}
+  else if(!T.open){h='На сегодня всё — ждём вас завтра';p='Откроемся в 12:00. Оставьте заявку сейчас, администратор перезвонит.';cta='Забронировать на завтра';preset='Ужин'}
+  else if(T.karaokeNow){h='Караоке уже началось';p='Звукорежиссёр настроит звук под ваш голос, вокалист подпоёт. Открыто до '+T.until+'.';cta='Забронировать стол сейчас';preset='Караоке-вечер'}
+  else if(T.karaokeDay&&T.min<1140){h='Сегодня вечером — караоке с 19:00';p='Забронируйте стол заранее: поужинайте, а в семь выходите на сцену. Открыто до '+T.closeToday+'.';cta='Стол на вечер';preset='Караоке-вечер'}
+  else if(T.min<1020){h='Обед и ужин в центре Хабаровска';p='Плов, лагман, хачапури и мангал на углях. Сегодня открыто до '+T.until+'.';cta='Забронировать стол';preset='Ужин'}
+  else{h='Тихий ужин без суеты';p='Сегодня без караоке, зато спокойно поговорить. Караоке ждёт вас с четверга. Открыто до '+T.until+'.';cta='Забронировать ужин';preset='Ужин'}
+  document.getElementById('hT').textContent=h;document.getElementById('hP').textContent=p;
+  var hc=document.getElementById('hCta');hc.textContent=cta;hc.dataset.book=preset;
+  document.getElementById('dot').classList.toggle('off',!T.open);
+  document.getElementById('nowTxt').textContent=(T.open?'Открыто':'Закрыто')+' · в Хабаровске';
+  document.getElementById('clock').textContent=T.hhmm(T.min);
+
+  // week strip
+  var W=[[1,'Пн','12–22',''],[2,'Вт','12–22',''],[3,'Ср','12–22',''],[4,'Чт','12–00','🎤'],[5,'Пт','12–02','🎤'],[6,'Сб','12–02','🎤'],[0,'Вс','12–00','🎤']];
+  document.getElementById('week').innerHTML=W.map(function(w){return '<div class="dd'+(w[0]===T.day?' today':'')+'"><b>'+w[1]+'</b><small>'+w[2]+'</small><i>'+w[3]+'</i></div>'}).join('');
+
+  // the evening, step by step
+  var link=function(id,label){var d=B[id];return d?'<a href="../menu.html#'+d.sec+'">'+(label||d.name)+'<b>от '+rub(K.minP(d))+'</b></a>':''};
+  var cocktails=K.M.dishes.filter(function(d){return d.sec==='bar-kokteyli'});
+  var cMin=cocktails.length?Math.min.apply(null,cocktails.map(K.minP)):0;
+  var ST=[
+    ['19:00','Ужин','Начните с восточной кухни: плов, казан-кабоб, мангал на углях.',K.img('plov',1),link('plov')+link('shashlyk')+link('hachapuri')],
+    ['20:00','Сцена','Свежие песни отечественных и зарубежных исполнителей, звукорежиссёр за пультом, вокалист споёт с вами или для вас.','../img/karaoke.jpg',''],
+    ['20:30','Пока вы поёте','Дети в детской комнате с аниматором: игрушки, мультики, присмотр. Можно оставаться до 00:00.','../img/kids.jpg',''],
+    ['До 02:00','Ночь','В пятницу и субботу работаем до двух. Коктейли от '+rub(cMin)+', а гостиница «Ариранг» в этом же комплексе.','../img/menu/b/bar-10.jpg','<a href="../menu.html#bar-kokteyli">Коктейли<b>от '+rub(cMin)+'</b></a><a href="https://www.xn--80aajs0apb.xn--p1ai/" target="_blank" rel="noopener">Номера в «Ариранге»</a>']
+  ];
+  document.getElementById('tl').innerHTML=ST.map(function(s){return '<div class="step"><div class="t">'+s[0]+'</div><div class="c"><div class="im"><img src="'+s[3]+'" alt="" loading="lazy"></div><div class="tx"><h3>'+s[1]+'</h3><p>'+s[2]+'</p>'+(s[4]?'<div class="links">'+s[4]+'</div>':'')+'</div></div></div>'}).join('');
+})();
+</script>
+</body>
+</html>

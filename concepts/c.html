@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#120c16">
+<meta name="robots" content="noindex, nofollow">
+<title>Концепт C «Праздник под ключ» — Шерали</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="base.css">
+<style>
+.hero{position:relative;padding:96px 0 40px;overflow:hidden}
+.hero .bg{position:absolute;inset:0;height:78vh}
+.hero .bg img{width:100%;height:100%;object-fit:cover}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,12,22,.55),rgba(18,12,22,.45) 40%,var(--bg))}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 440px;gap:40px;align-items:end;min-height:calc(78vh - 96px)}
+@media(max-width:960px){.hero .wrap{grid-template-columns:1fr;min-height:0;gap:22px}.hero .bg{height:62vh}}
+.hero h1{font-size:clamp(48px,8vw,100px)}
+.hero p.l{font-size:18px;color:#e6dcea;max-width:560px;margin-top:14px}
+.ticks{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+/* calculator */
+.calc{background:rgba(27,18,33,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:26px;padding:22px}
+.calc h2{font-family:var(--serif);font-size:30px;line-height:1.05;margin-bottom:4px}
+.lbl{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px}
+.occ{display:flex;gap:6px;flex-wrap:wrap}
+.occ button{height:38px;padding:0 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.04);font-weight:700;font-size:13px}
+.occ button.on{border-color:var(--gold);background:rgba(227,176,75,.14);color:var(--gold-2)}
+.gu{display:flex;align-items:center;gap:14px}
+.gu input{flex:1;accent-color:var(--gold);height:28px}
+.gu b{font-family:var(--serif);font-size:38px;min-width:58px;text-align:right;line-height:1}
+.sets{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.set{border-radius:14px;overflow:hidden;border:1.5px solid var(--line);background:#170f1c;padding:0;text-align:left}
+.set img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.set span{display:block;padding:8px 10px;font-weight:800;font-size:13px}
+.set.on{border-color:var(--gold)}
+.res{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.res .pp{font-family:var(--serif);font-size:52px;line-height:.9;color:var(--gold-2)}
+.res small{color:var(--muted);font-size:13px;line-height:1.35}
+.comp{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.5}
+.calc .btn{width:100%;margin-top:14px}
+.calc .note{font-size:11px;color:var(--muted);margin-top:8px}
+section{padding:72px 0 0}
+.h2{font-size:clamp(36px,5vw,58px);margin-bottom:22px}
+.inc{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.inc div{padding:20px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.inc .e{font-size:28px}
+.inc b{display:block;font-size:16px;margin-top:8px}
+.inc span{font-size:14px;color:var(--muted)}
+@media(max-width:900px){.inc{grid-template-columns:1fr 1fr}}
+.halls{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hall{position:relative;border-radius:24px;overflow:hidden;min-height:380px;display:flex;align-items:flex-end;padding:20px;background:#000}
+.hall img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75;transition:transform .7s}
+.hall:hover img{transform:scale(1.05)}
+.hall::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(18,12,22,.95))}
+.hall>div{position:relative;z-index:1;width:100%}
+.hall h3{font-family:var(--serif);font-size:34px}
+.hall .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:8px}
+.hall .row span{font-size:14px;color:#e2d8e6}
+.hall .btn{min-height:42px;padding:0 16px;font-size:14px}
+@media(max-width:900px){.halls{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px;scrollbar-width:none}.hall{scroll-snap-align:start;min-height:340px}}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;counter-reset:s}
+.how div{padding:22px;border-radius:20px;border:1px solid var(--line);position:relative}
+.how div::before{counter-increment:s;content:counter(s);font-family:var(--serif);font-size:64px;line-height:1;color:var(--gold);opacity:.9}
+.how b{display:block;font-size:17px;margin-top:4px}
+.how span{font-size:14px;color:var(--muted)}
+@media(max-width:800px){.how{grid-template-columns:1fr}}
+.proof{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:28px;padding:18px;border-radius:20px;background:var(--card);border:1px solid var(--line)}
+.proof img{width:64px;height:80px;object-fit:contain;background:#fff;border-radius:10px;padding:4px}
+.proof p{flex:1;min-width:200px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html"><img src="../img/logo.png" alt="Шерали"></a><div class="sp"></div>
+  <nav><a href="#calc">Расчёт</a><a href="#halls">Залы</a><a href="../menu.html">Меню</a><a href="#contacts">Контакты</a></nav>
+  <a class="ico" href="tel:+74212575555" aria-label="Позвонить"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  <button class="btn btn-gold" data-book="Праздник">Обсудить праздник</button>
+</div></header>
+<div class="concept-tag">Концепт C · <a href="index.html">все</a></div>
+
+<section class="hero" style="padding-top:96px">
+  <div class="bg"><img src="../img/hall-big.jpg" alt="Большой зал"></div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Банкеты и праздники</div>
+      <h1 class="serif">Праздник, после которого гости спрашивают «где это было?»</h1>
+      <p class="l">Отдельный зал, восточная кухня и мангал, караоке со звукорежиссёром и детская с аниматором. Посчитайте стоимость прямо сейчас.</p>
+      <div class="ticks"><span class="chip">🎤 Караоке</span><span class="chip">🧸 Детская</span><span class="chip">🏨 Номера рядом</span></div>
+    </div>
+    <div class="calc" id="calc">
+      <h2>Сколько стоит ваш праздник</h2>
+      <div class="lbl">Повод</div>
+      <div class="occ" id="occ"><button class="on">День рождения</button><button>Корпоратив</button><button>Юбилей</button><button>Свадьба</button><button>Детский</button></div>
+      <div class="lbl">Гостей</div>
+      <div class="gu"><input type="range" id="g" min="4" max="40" step="1" value="12" aria-label="Количество гостей"><b id="gN">12</b></div>
+      <div class="lbl">Какой стол</div>
+      <div class="sets" id="sets"></div>
+      <div class="res"><div class="pp" id="pp"></div><small id="tot"></small></div>
+      <div class="comp" id="comp"></div>
+      <button class="btn btn-gold" data-book="Праздник">Получить точный расчёт</button>
+      <p class="note">Ориентир по ценам меню без напитков. Точное банкетное меню и условия пришлёт администратор.</p>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section>
+    <h2 class="serif h2">Всё уже включено в место</h2>
+    <div class="inc">
+      <div><span class="e">🎤</span><b>Караоке</b><span>Звукорежиссёр и вокалист на вечере</span></div>
+      <div><span class="e">🧸</span><b>Детская комната</b><span>Аниматор присмотрит за детьми до 00:00</span></div>
+      <div><span class="e">🔥</span><b>Мангал</b><span>Шашлык, люля и садж на всю компанию</span></div>
+      <div><span class="e">🏨</span><b>Гостиница</b><span>«Ариранг» в этом же комплексе</span></div>
+    </div>
+  </section>
+
+  <section id="halls">
+    <h2 class="serif h2">Выберите зал</h2>
+    <div class="halls">
+      <div class="hall"><img src="../img/hall-east.jpg" alt="" loading="lazy"><div><h3 class="ph" title="Уточнить название">Восточный зал</h3><div class="row"><span class="ph" title="Уточнить вместимость">до __ гостей</span><button class="btn btn-gold" data-book="Праздник">Узнать даты</button></div></div></div>
+      <div class="hall"><img src="../img/hall-big2.jpg" alt="" loading="lazy"><div><h3 class="ph" title="Уточнить название">Большой зал</h3><div class="row"><span class="ph" title="Уточнить вместимость">до __ гостей</span><button class="btn btn-gold" data-book="Праздник">Узнать даты</button></div></div></div>
+      <div class="hall"><img src="../img/lobby.jpg" alt="" loading="lazy"><div><h3 class="ph" title="Уточнить название">Лаунж и бар</h3><div class="row"><span class="ph" title="Уточнить вместимость">до __ гостей</span><button class="btn btn-gold" data-book="Праздник">Узнать даты</button></div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="serif h2">Как это работает</h2>
+    <div class="how">
+      <div><b>Заявка за минуту</b><span>Повод, число гостей и дата. Можно прямо из калькулятора.</span></div>
+      <div><b>Меню и зал</b><span>Администратор подберёт банкетное меню и свободный зал под ваш бюджет.</span></div>
+      <div><b>Праздник</b><span>Вы приходите к накрытому столу. Караоке и детская уже ждут.</span></div>
+    </div>
+    <div class="proof"><img src="../img/award-yandex.jpg" alt="Яндекс Карты — Хорошее место 2026"><img src="../img/award-guru.jpg" alt="Restaurant Guru 2026"><p>«Хорошее место 2026» на Яндекс Картах и рекомендация Restaurant Guru 2026. Здесь же будут живые отзывы с Яндекс Карт.</p></div>
+  </section>
+</main>
+
+<footer id="contacts"><div class="wrap">Хабаровск, пер. Свободный, 11 · +7 (4212) 57-55-55<br>Концепт C «Праздник под ключ»: продаёт банкеты, самый высокий чек. Пунктиром — что уточнить у ресторана.</div></footer>
+
+<div class="abar">
+  <a href="tel:+74212575555"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Звонок</a>
+  <a href="https://wa.me/79241105577" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+  <button class="btn-gold" data-book="Праздник">Расчёт</button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="../menu-data.js"></script>
+<script src="kit.js"></script>
+<script>
+(function(){
+  var K=KIT,B=K.byId,rub=K.rub;
+  // table sets priced from the real menu: per guest items and per-4-guests items [id, variant]
+  var SETS=[
+    {n:'Мангал',img:'shashlyk',guest:[['shashlyk',3]],four:[['lyulya-kebab',0],['svezhie-sezonnye-ovoschi-i-zelen',0],['mini-kartofel',0],['hlebnaya-korzina',0]]},
+    {n:'Восточный',img:'plov',guest:[['plov',0],['manty',0]],four:[['bahor',0],['svezhie-sezonnye-ovoschi-i-zelen',0],['lepeshka',0]]},
+    {n:'Садж',img:'sadzh',guest:[],four:[['sadzh',0],['hachapuri',0],['svezhie-sezonnye-ovoschi-i-zelen',0],['hlebnaya-korzina',0]]}
+  ];
+  SETS.forEach(function(s){s.guest=s.guest.filter(function(x){return B[x[0]]});s.four=s.four.filter(function(x){return B[x[0]]})});
+  var sel=0,g=12;
+  document.getElementById('sets').innerHTML=SETS.map(function(s,i){return '<button class="set'+(i?'':' on')+'" data-i="'+i+'"><img src="'+K.img(s.img,0)+'" alt=""><span>'+s.n+'</span></button>'}).join('');
+  var nm=function(x){var d=B[x[0]],v=d.vars[x[1]];return d.name+(v.n?' ('+v.n.toLowerCase()+')':'')};
+  function calc(){
+    var s=SETS[sel],tables=Math.ceil(g/4),sum=0;
+    s.guest.forEach(function(x){sum+=B[x[0]].vars[x[1]].p*g});
+    s.four.forEach(function(x){sum+=B[x[0]].vars[x[1]].p*tables});
+    document.getElementById('gN').textContent=g;
+    document.getElementById('pp').textContent='≈ '+rub(Math.round(sum/g/10)*10);
+    document.getElementById('tot').innerHTML='на гостя<br>'+rub(sum)+' за стол на '+g;
+    document.getElementById('comp').textContent='Пример: '+s.guest.map(function(x){return nm(x)+' каждому'}).concat(s.four.map(function(x){return nm(x)+' ×'+tables})).join(', ')+'.';
+  }
+  document.getElementById('g').addEventListener('input',function(){g=+this.value;calc()});
+  document.getElementById('sets').addEventListener('click',function(e){var b=e.target.closest('.set');if(!b)return;sel=+b.dataset.i;document.querySelectorAll('.set').forEach(function(x){x.classList.toggle('on',x===b)});calc()});
+  document.getElementById('occ').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;document.querySelectorAll('#occ button').forEach(function(x){x.classList.toggle('on',x===b)})});
+  calc();
+})();
+</script>
+</body>
+</html>

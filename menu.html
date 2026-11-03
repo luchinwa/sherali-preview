@@ -534,7 +534,8 @@ var ld={'@context':'https://schema.org','@type':'Menu',name:'Меню ресто
 var sc=document.createElement('script');sc.type='application/ld+json';sc.textContent=JSON.stringify(ld);document.head.appendChild(sc);
 
 render('');cartView();if(secs[0])setCat(secs[0].id);
-if(location.hash){var t=document.getElementById('s-'+location.hash.slice(1));if(t)t.scrollIntoView()}
+if(location.hash==='#table')openCart();
+else if(location.hash){var t=document.getElementById('s-'+location.hash.slice(1));if(t)t.scrollIntoView()}
 })();
 </script>
 </body>
